@@ -12,4 +12,10 @@ export class EducationComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  color(element, color) {
+ 
+    console.log('Dessus');
+  }
+
 }

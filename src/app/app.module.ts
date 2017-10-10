@@ -2,33 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
-import { ProfilComponent } from './profil/profil.component';
 import { BannerComponent } from './intro/intro.component';
 import { EducationComponent } from './education/education.component';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfilComponent,
     BannerComponent,
     EducationComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule
+    MatButtonModule
     ],
   providers: [],
+  exports: [MatButtonModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
