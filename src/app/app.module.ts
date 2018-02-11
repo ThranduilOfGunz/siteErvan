@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatCard, MatCardModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule,
+    MatIconModule, MatCard, MatCardModule, MatToolbarModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BannerComponent } from './intro/intro.component';
@@ -13,26 +14,28 @@ import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BannerComponent,
-    EducationComponent,
-    MenuComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    BrowserAnimationsModule,
-    MatInputModule, 
-    MatButtonModule,
-    MatSelectModule,
-    MatIconModule,
-    MatCardModule
+    declarations: [
+        AppComponent,
+        BannerComponent,
+        EducationComponent,
+        MenuComponent,
+        FooterComponent
     ],
-  providers: [],
-  exports: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatIconModule
+    ],
+    providers: [],
+    exports: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

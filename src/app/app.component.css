@@ -1,3 +1,12 @@
 .augSize{
 	height : 500px;
 }
+
+.resizeButton{
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.iconButton{
+padding: 0;
+}
