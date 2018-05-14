@@ -10,3 +10,19 @@ padding-right: 0px;
 .iconButton{
 padding: 0;
 }
+
+.dusty{
+  background-color: #96858F;
+}
+
+.navyBlue{
+  background-color: rgb(91, 77, 146);
+}
+
+.overcast{
+  background-color: #9099A2;
+}
+
+.paper{
+  background-color: #D5D5D5;
+}

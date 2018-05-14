@@ -1,4 +1,11 @@
-
 .spacer {
-    flex: 1 0 auto;
+  flex: 1 0 inherit;
+}
+
+
+
+.tailleBouton {
+  height: 90px;
+  border-radius: 0;
+  padding: 0;
 }

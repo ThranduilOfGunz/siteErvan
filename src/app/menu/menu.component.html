@@ -1,7 +1,29 @@
-<mat-toolbar style="background-color: grey">
-    <mat-toolbar-row>
-        <button mat-button class="resizeButton"><mat-icon class="icon iconButton" >home</mat-icon></button>
-        <button mat-button class="resizeButton"><mat-icon class="icon iconButton">airplanemode_active</mat-icon></button>
-        <span class="spacer"></span>
-    </mat-toolbar-row>
-</mat-toolbar>
+<!-- <mat-toolbar class="lavender">
+  <mat-toolbar-row>
+    <nav> -->
+
+
+<!-- <button mat-button class="resizeButton" [routerLink]="['/home']">
+        <mat-icon class="icon iconButton">home</mat-icon>
+      </button>
+      <button mat-button class="resizeButton" [routerLink]="['/blog-voyage']">
+        <mat-icon class="icon iconButton">airplanemode_active</mat-icon>
+      </button>
+      <span class="spacer"></span> -->
+<!-- </nav>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+<div class="row">
+  <button class="btn tailleBouton eggshell" style="width: 40%" [routerLink]="['/home']">
+    <span class="navyBluePolice police">ERVAN RENAULT</span>
+  </button>
+  <button class="btn tailleBouton navyBlue" style="width: 20%" [routerLink]="['/blog-voyage']">
+    <span class="eggshellPolice police">VOYAGE</span>
+  </button>
+  <button class="btn tailleBouton leather" style="width: 20%">
+    <span class="navyBluePolice police">PARCOURS</span>
+  </button>
+  <button class="btn tailleBouton coral" style="width: 20%">
+    <span class="navyBluePolice police">CV</span>
+  </button>
+</div>

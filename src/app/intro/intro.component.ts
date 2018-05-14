@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro.component.css']
 })
 export class BannerComponent implements OnInit {
-  //sourceImage: string = "../../assets/images/hogwarts_wallpapers.jpg";
+  // sourceImage: string = "../../assets/images/hogwarts_wallpapers.jpg";
   constructor() { }
 
   ngOnInit() {
