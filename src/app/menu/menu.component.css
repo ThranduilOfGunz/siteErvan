@@ -2,10 +2,21 @@
   flex: 1 0 inherit;
 }
 
-
+.buttonMenu{
+  border-radius: 0;
+  width: 100%;
+}
 
 .tailleBouton {
   height: 90px;
   border-radius: 0;
   padding: 0;
+}
+
+.hauteur{
+  height: 60px
+}
+
+noMargin{
+  margin: 0;
 }

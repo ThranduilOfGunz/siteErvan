@@ -1,3 +1,13 @@
-.descriptionCard{
-    display: table-column;
+.descriptionCard {
+  display: table-column;
+}
+
+.topStyle {
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+
+.background{
+  background-color: grey;
 }

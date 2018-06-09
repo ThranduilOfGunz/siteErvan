@@ -12,9 +12,14 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 
+html{
+  overflow-y: hidden !important;
+}
 body {
     font-family: $mat-font-family;
     font-weight: normal;
+    overflow-y: hidden !important;
+    margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -42,9 +47,18 @@ h1, h2, h3, h4 {
 }
 
 .coral{
-  background-color: #FF533D;
+  background-color: #ec9f0d;
 }
 
 .police{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.fontWhite {
+  color: white;
+}
+
+.noPadding{
+  padding: 0;
+margin: 0;
 }
