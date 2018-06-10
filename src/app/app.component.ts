@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Observable';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ng2Parallax  } from '../../node_modules/ang2-parallax/ng2parallax';
 
@@ -7,5 +8,5 @@ import { ng2Parallax  } from '../../node_modules/ang2-parallax/ng2parallax';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
-  title = 'app works!';
+    title = 'app works!';
 }
