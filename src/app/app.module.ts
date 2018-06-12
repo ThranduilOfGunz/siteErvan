@@ -1,3 +1,5 @@
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { SharedModule } from './shared/shared.module';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
@@ -55,12 +57,13 @@ import { AngularFireModule } from 'angularfire2';
         MatToolbarModule,
         MatIconModule,
         AppRoutingModule,
+        SharedModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
         AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
-    providers: [],
+    providers: [AngularFireDatabase],
     exports: [],
     bootstrap: [AppComponent]
 })
