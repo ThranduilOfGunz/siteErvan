@@ -1,0 +1,49 @@
+{
+  "etudes" : {
+    "anneeEtude1" : {
+      "dateDebut" : 2008,
+      "dateFin" : 2010,
+      "description" : "Baccalauréat STL (Sciences Techniques de Laboratoire)  au Lycée Robert Schuman au Havre.",
+      "descriptionComplémentaire" : "A REMPLIR",
+      "id" : 0,
+      "lienVideo" : "",
+      "nomFormation" : "Baccalauréat Science de la Technologie de Laboratoire."
+    },
+    "anneeEtude2" : {
+      "dateDebut" : 2010,
+      "dateFin" : 2011,
+      "description" : "DUPRES (Diplôme d'Université de Préparation aux Études Scientifiques).",
+      "descriptionComplémentaire" : "A REMPLIR",
+      "id" : 1,
+      "lienVideo" : "",
+      "nomFormation" : "DUPRES"
+    },
+    "anneeEtude3" : {
+      "dateDebut" : 2011,
+      "dateFin" : 2013,
+      "description" : "DUT Informatique à l'Université du Havre.",
+      "descriptionComplémentaire" : "A REMPLIR",
+      "id" : 2,
+      "lienVideo" : "https://www.youtube.com/embed/xBDsGjCpknw",
+      "nomFormation" : "DUT Informatique"
+    },
+    "anneeEtude4" : {
+      "dateDebut" : 2013,
+      "dateFin" : 2014,
+      "description" : "Licence 3 en Informatique et Bachelor of Science Software Engineering avec ERASMUS en Irlande.",
+      "descriptionComplémentaire" : "A REMPLIR",
+      "id" : 3,
+      "lienVideo" : "",
+      "nomFormation" : "Licence 3 informatique & of Science Software Engineering"
+    },
+    "anneeEtude5" : {
+      "dateDebut" : 2014,
+      "dateFin" : 2017,
+      "description" : "Master Informatique effectué à l'université de Rennes. En seconde année de Master j'ai choisi l'option MITIC; Méthode Informatiques et Technologies de l'Information et de la Communication.",
+      "descriptionComplémentaire" : "A REMPLIR",
+      "id" : 4,
+      "lienVideo" : "http://www.youtube.com/embed/naW9U8MiUY0",
+      "nomFormation" : "Master Informatique"
+    }
+  }
+}
