@@ -12,19 +12,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 
-html{
-  overflow-y: hidden !important;
-}
-body {
-    font-family: $mat-font-family;
-    font-weight: normal;
-    overflow-y: hidden !important;
-    margin: 0;
-}
 
-h1, h2, h3, h4 {
-    font-weight: normal;
-}
 
 .navyBlue {
   background-color: #0F1626;
@@ -62,3 +50,29 @@ h1, h2, h3, h4 {
   padding: 0;
 margin: 0;
 }
+
+md-tab-group {
+    background-color: #0f1626;
+}
+
+
+.mat-tab-label {
+    width: 100%;
+}
+
+
+.mat-tab-label.mat-tab-label-active{
+    background-color:  #0f1626!important;
+    color: #F5F5F5!important;
+}
+
+.mat-ink-bar {
+    background-color: #ec9f0d!important;
+}
+
+.back{
+    width: -webkit-fill-available;
+}
+
+
+

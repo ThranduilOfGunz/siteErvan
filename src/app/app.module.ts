@@ -31,6 +31,8 @@ import { ButtonMenuComponent } from './shared/components/buttons/button-menu/but
 import { environment } from './../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +44,8 @@ import { AngularFireModule } from 'angularfire2';
         BlogVoyageComponent,
         HomeComponent,
         ButtonLogoComponent,
-        ButtonMenuComponent
+        ButtonMenuComponent,
+        CvComponent
     ],
     imports: [
         BrowserModule,
@@ -57,6 +60,7 @@ import { AngularFireModule } from 'angularfire2';
         MatToolbarModule,
         MatIconModule,
         AppRoutingModule,
+        MatTabsModule,
         SharedModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features

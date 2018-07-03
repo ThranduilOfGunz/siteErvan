@@ -1,4 +1,5 @@
-<div class="topStyle background">
+
+<div class="col-md-12 topStyle background">
     <div class="row">
         <div class="col-md-6 ">
             <div class="row paddingTop" *ngFor="let item of etudes |async">
@@ -22,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 layout-fill">
+        <div class="col-md-6 ">
             <div class="row container">
                 <div id="bac" class="offset-md-1 col-md-10 flex">
                     <mat-card style="position: relative">
@@ -37,7 +38,7 @@
                         </mat-card-header>
                         <mat-card-content>
                             <p *ngIf="video !== null">
-                                <iframe width="560" height="315"  [src]="video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe width="560" height="315" [src]="video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </p>
                         </mat-card-content>
                     </mat-card>
@@ -46,3 +47,4 @@
         </div>
     </div>
 </div>
+

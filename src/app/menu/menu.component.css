@@ -20,3 +20,10 @@
 noMargin{
   margin: 0;
 }
+
+.header{
+
+    position: absolute;
+    width: 100%;
+
+}

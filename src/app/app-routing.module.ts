@@ -1,3 +1,4 @@
+import { CvComponent } from './cv/cv.component';
 import { EducationComponent } from './education/education.component';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ const appRoutes: Routes = [
   { path: 'blog-voyage', component: BlogVoyageComponent },
   { path: 'home', component: HomeComponent },
   { path: 'job', component: EducationComponent },
+  { path: 'cv', component: CvComponent },
   { path: '**', component: HomeComponent }
 ];
 
