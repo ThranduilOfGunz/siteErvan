@@ -14,7 +14,8 @@ import {
     MatIconModule,
     MatCard,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './/app-routing.module';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { HomeComponent } from './home/home.component';
 import { ButtonLogoComponent } from './shared/components/buttons/button-logo/button-logo.component';
 import { ButtonMenuComponent } from './shared/components/buttons/button-menu/button-menu.component';
@@ -33,6 +35,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CvComponent } from './cv/cv.component';
+import { ExperienceComponent } from './cv/experience/experience.component';
 
 @NgModule({
     declarations: [
@@ -45,7 +48,8 @@ import { CvComponent } from './cv/cv.component';
         HomeComponent,
         ButtonLogoComponent,
         ButtonMenuComponent,
-        CvComponent
+        CvComponent,
+        ExperienceComponent
     ],
     imports: [
         BrowserModule,
@@ -62,6 +66,8 @@ import { CvComponent } from './cv/cv.component';
         AppRoutingModule,
         MatTabsModule,
         SharedModule,
+        MatDialogModule,
+        ScrollDispatchModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,

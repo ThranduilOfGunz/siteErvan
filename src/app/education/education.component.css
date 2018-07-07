@@ -15,10 +15,10 @@
 
 .background{
   background-color: grey;
-  background-position: top center;
+  /* background-position: top center;
   width: 100%;
   height: auto;
-  position: fixed;
+  position: fixed; */
 }
 
 .mat-card {
@@ -28,5 +28,5 @@
 
 
   .container{
-      min-height: 80vh;
+      min-height: 120vh;
   }

@@ -1,6 +1,5 @@
 import { Observable } from 'rxjs/Observable';
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ng2Parallax  } from '../../node_modules/ang2-parallax/ng2parallax';
 
 @Component({
   selector: 'app-root',
