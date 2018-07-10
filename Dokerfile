@@ -1,0 +1,7 @@
+FROM httpd:2.4
+
+RUN rm -f /var/www/html/*
+COPY ./dist/ /var/www/html/
+RUN chmod 777 -R /var/www/html/*
+
+CMD /usr/sbin/apachectl -DFOREGROUND
