@@ -1,27 +1,23 @@
 sudo: false
 dist: trusty
 language: node_js
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 addons:
   chrome: stable
-
 node_js:
-  - "10.6.0"
-
+- 10.6.0
 matrix:
   fast_finish: true
-
 before_install:
-  - npm cache verify
-  - npm prune
-  - npm update
-
+- npm cache verify
+- npm prune
+- npm update
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run ci:travis
+- npm run ci:travis
+notifications:
+  slack:
+    secure: at1RgAjj0zCjX52NrypqzDz67QsracLWPH3bjlMKRwn9fBDqDrdnnMopKmfg+9WDRBgPn608wAzkZgh4U/FwJNz34rmo4Q9/diF2gNrJIL9AZ6IL7FnUuF1iOVXM4F51hGlnC/oslUVRBrxHswJ4CFL8gotlk76WWq+UdjzV1Ff/gTcBpAdyjRsARO3cc0GtrPbKSYEl8N1ZtLJlEIV6o/yRDK6LnrV2Bn0sP4Eq1ErYm1QiKcDZNCezbmWa5qM6KNlXYf8VejpS2hsyd6zrNoPR1LJmrCczZHkIufzINn8YWMOqUAX6vB5YqeegCOo5ccpj+BunuxQ6Nu33zAkscc0NPCXChYhYLrjMYxPL3XM0i41W2jSsOGUQUbPTdku+xvzCDpqnUvdxNr/90qlIClkQ6iuP/sfp6ZVR6qiohuKnLWGbMTTBxn/JrJGn2CBU4AHRfMKzIvnmn5clAVz5TVZZT7B0RVYxojesHthOzCjOp0a72QTmeIPADGRaJFjecaomlzVc5PJjnip+xWVowCE+4nBq+//bj5Pi6scNluFC+CaaqI4craj8wtLTaMUw9/ytjkCVnOmIUJezET0sZS+CEh8ADDxDUYleM9UAGF6jqfVZ0pAfU63X4R3wwqibAOzlkqzPJtJVnBiHUErDE8LqF5x4g3SEAf6aya++wTI=
