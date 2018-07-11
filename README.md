@@ -1,6 +1,7 @@
 # SiteErvan
 
-[![Build Status](https://travis-ci.com/ThranduilOfGunz/siteErvan.svg?branch=master)](https://travis-ci.com/ThranduilOfGunz/siteErvan)
+[![Build Status](https://travis-ci.com/ThranduilOfGunz/siteErvan.svg?branch=master)](https://travis-ci.com/ThranduilOfGunz/siteErvan) 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0be322908e74312b6f0c7dfca2ec692)](https://www.codacy.com/app/Lautre3091/siteErvan?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ThranduilOfGunz/siteErvan&amp;utm_campaign=Badge_Grade)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
