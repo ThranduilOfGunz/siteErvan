@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import {ParallaxModule, ParallaxConfig} from 'ngx-parallax';
+
 import {
     MatInputModule,
     MatButtonModule,
@@ -37,6 +39,9 @@ import { AngularFireModule } from 'angularfire2';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CvComponent } from './cv/cv.component';
 import { ExperienceComponent } from './cv/experience/experience.component';
+import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
+import { HomeCvComponent } from './home/home-cv/home-cv.component';
+import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
 
 @NgModule({
     declarations: [
@@ -50,13 +55,17 @@ import { ExperienceComponent } from './cv/experience/experience.component';
         ButtonLogoComponent,
         ButtonMenuComponent,
         CvComponent,
-        ExperienceComponent
+        ExperienceComponent,
+        HomePresentationComponent,
+        HomeCvComponent,
+        HomeVoyageComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         BrowserAnimationsModule,
+        ParallaxModule,
         MatInputModule,
         MatButtonModule,
         MatSelectModule,

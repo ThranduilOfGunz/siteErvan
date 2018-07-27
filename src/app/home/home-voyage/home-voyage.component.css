@@ -1,0 +1,10 @@
+*[parallax] {
+    width: 1920px;
+    height: 750px;
+    
+    background-size: 100%;
+}
+
+#exemple {
+    background-image: url('../../../assets/images/australie_sidney.jpg');
+}
