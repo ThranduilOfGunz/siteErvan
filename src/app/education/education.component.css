@@ -13,12 +13,14 @@
 }
 
 
+.padding{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
 .background{
   background-color: grey;
-  /* background-position: top center;
-  width: 100%;
-  height: auto;
-  position: fixed; */
+  background-size: auto 100%;
 }
 
 .mat-card {
@@ -29,4 +31,12 @@
 
   .container{
       min-height: 120vh;
+  }
+
+  .center{
+      text-align: center;
+  }
+
+  .fontCouleur{
+      background-color: #AAAAAA;
   }

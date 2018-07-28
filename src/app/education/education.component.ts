@@ -11,7 +11,12 @@ import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
 export class EducationComponent implements OnInit {
 
     etudes: FirebaseListObservable<EtudeModel[]>;
-    cardSelectione: EtudeModel;
+    cardSelectionne: EtudeModel;
+
+    colorSelection: EtudeModel;
+    estSelectionne =  false;
+    titreSelection: string;
+    detailSelection = '';
     video: SafeHtml = null;
     constructor(db: AngularFireDatabase, private ds: DomSanitizer) {
         this.etudes = db.list('/etudes');
@@ -21,19 +26,25 @@ export class EducationComponent implements OnInit {
     }
 
     selectionCard(item: EtudeModel) {
-        if (this.cardSelectione === item) {
-            this.cardSelectione = null;
+        if (this.cardSelectionne === item) {
+            this.cardSelectionne = null;
         } else {
-            this.cardSelectione = item;
+            this.estSelectionne = true;
+            this.cardSelectionne = item;
             if (item.lienVideo) {
                 this.video = this.ds.bypassSecurityTrustResourceUrl(item.lienVideo);
-                console.log(this.video);
             } else {
                 this.video = null;
             }
+
+            this.titreSelection = item.description;
+            this.detailSelection = item.descriptionComplémentaire;
         }
 
-        console.log(this.cardSelectione);
+        console.log(this.cardSelectionne);
+        if(item === this.cardSelectionne) {
+            console.log('C\'EST BON');
+        }
     }
 
 
