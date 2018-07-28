@@ -7,13 +7,13 @@
   padding-right: 10%;
 }
 
-.bg{
+/* .bg{
   width: 100%;
   height: -webkit-fill-available;
   position: fixed;
   background: url('../../assets/images/hogwarts_wallpapers.jpg') no-repeat center;
   background-position: top center;
-}
+} */
 
 .hauteurParties{
   max-height: 100px;
