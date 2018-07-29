@@ -1,3 +1,4 @@
+import { ExperienceModel } from './../../../models/experience.model';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { DialogModel } from '../../../models/dialog.model';
@@ -12,17 +13,24 @@ import { DonneesModalExperienceModel } from '../../../models/donnees-modal-exper
 export class DialogComponent implements OnInit {
 
    titre: string;
-   anneeDebut: string;
+   date: string;
    anneeFin: string;
    contenu: string;
+   duree: number;
+   typeDuree: string;
+   fonction: string;
+   image: string;
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DonneesModalExperienceModel) {
-      this.anneeDebut = data.anneeDebut;
-      this.anneeFin = data.anneeFin;
-      this.contenu = data.contenu;
-      this.titre = data.titre;
+    @Inject(MAT_DIALOG_DATA) public data: {item: ExperienceModel, image: string}) {
+      this.contenu = data.item.description;
+      this.titre = data.item.societe;
+      this.duree = data.item.duree;
+      this.typeDuree = data.item.typeDuree;
+      this.fonction = data.item.fonction;
+      this.date = data.item.date;
+      this.image = '../../../../../assets/images/' + data.image;
 
     }
 

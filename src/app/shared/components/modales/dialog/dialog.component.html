@@ -1,11 +1,16 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>
-            <strong>{{titre}}</strong>
-        </mat-card-title>
-        <br> {{anneeDebut}} - {{anneeFin}}
-    </mat-card-header>
-    <mat-card-content>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-8">
+        <strong>{{titre}} </strong>
+        <span *ngIf="date"> - {{date}}</span>
+        <span *ngIf="!date"> - {{duree}}  {{typeDuree}}</span>
+    </div>
+    <div class="offset-md-2">
+        <img class="resize" [src]="image">
+    </div>
+    </div>
+    <div class="row">
+        <br>
         {{contenu}}
-    </mat-card-content>
-</mat-card>
+    </div>
+</div>
