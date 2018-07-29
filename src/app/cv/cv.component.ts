@@ -1,3 +1,5 @@
+import { MatSnackBar } from '@angular/material';
+import { SnackBarComponent } from './../shared/components/snack-bar/snack-bar.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
-  constructor() { }
+  constructor( public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
+
+  versExperience(event) {
+      if (event.index === 1) {
+          this.openSnackBar();
+      }
+  }
+
+  openSnackBar() {
+  this.snackBar.openFromComponent(SnackBarComponent, {
+      duration: 3000,
+    });
+}
 
 }
