@@ -32,12 +32,6 @@ export class HomeComponent implements OnInit {
     this.names.remove();
  }
 
-
-//   getCourses(listPath): Observable<any[]> {
-//       console.log(this.db.list(listPath).valueChanges());
-//     return this.db.list(listPath).valueChanges();
-//   }
-
   getUrl() {
     return 'url(../../assets/images/hogwarts_wallpapers.jpg)';
   }

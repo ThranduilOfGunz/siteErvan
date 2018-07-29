@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
   }
 
   goToBlog() {
-    console.log('coucou')
     this.router.navigate(['blog-voyage']);
   }
 

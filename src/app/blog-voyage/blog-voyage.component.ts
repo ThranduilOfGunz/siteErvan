@@ -10,7 +10,6 @@ export class BlogVoyageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Dans BLOG')
   }
 
 }

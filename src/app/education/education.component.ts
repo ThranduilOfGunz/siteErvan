@@ -41,16 +41,6 @@ export class EducationComponent implements OnInit {
             this.detailSelection = item.descriptionComplémentaire;
         }
 
-        console.log(this.cardSelectionne);
-        if(item === this.cardSelectionne) {
-            console.log('C\'EST BON');
-        }
-    }
-
-
-    color(element, color) {
-
-        console.log('Dessus');
     }
 
 }
