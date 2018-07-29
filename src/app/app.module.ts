@@ -18,7 +18,8 @@ import {
     MatCardModule,
     MatToolbarModule,
     MatDialogModule,
-    MatCardSubtitle
+    MatCardSubtitle,
+    MatSnackBarModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,7 +59,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
         ExperienceComponent,
         HomePresentationComponent,
         HomeCvComponent,
-        HomeVoyageComponent
+        HomeVoyageComponent,
     ],
     imports: [
         BrowserModule,
@@ -78,6 +79,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
         SharedModule,
         MatDialogModule,
         ScrollDispatchModule,
+        MatSnackBarModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
