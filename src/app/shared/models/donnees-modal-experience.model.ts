@@ -3,4 +3,7 @@ export interface DonneesModalExperienceModel {
     anneeFin: string;
     titre: string;
     contenu: string;
+    duree: number;
+    typeDuree: string;
+    fonction: string;
 }
