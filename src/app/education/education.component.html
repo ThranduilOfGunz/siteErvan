@@ -5,7 +5,7 @@
         <div class="col-md-6 padding ">
                 <div class="row paddingTop" *ngFor="let item of etudes |async">
                     <div id="bac" class="offset-md-2 col-md-10">
-                        <mat-card   [class.fontCouleur]="cardSelectionne === item"  (click)="selectionCard(item)"  >
+                        <mat-card   [class.fontCouleur]="cardSelectionne === item" class=" pointeur over" (click)="selectionCard(item)"  >
                             <mat-card-header>
                                 <mat-card-title>
                                     <strong>{{item.nomFormation}}</strong>

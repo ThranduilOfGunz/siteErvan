@@ -7,49 +7,54 @@ import { DonneesModalExperienceModel } from '../../shared/models/donnees-modal-e
 import { SnackBarComponent } from '../../shared/components/snack-bar/snack-bar.component';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
 
     experiences: FirebaseListObservable<ExperienceModel[]>;
     experiencesListe: ExperienceModel[];
+    enCours: ExperienceModel = new ExperienceModel();
+    mouseOver = false;
 
-  constructor(public dialog: MatDialog, private db: AngularFireDatabase) {
-      this.db.list('experiences').subscribe(k => {
-          this.experiencesListe = k;
-      });
-   }
-
-  ngOnInit() {
-  }
-
-  clickImage(id: number, image: string) {
-   let item: ExperienceModel;
-   this.experiencesListe.forEach(element => {
-       if (element.id === id) {
-            item = element;
-       }
-   });
-    const data: DonneesModalExperienceModel = {
-        duree: item.duree,
-        fonction: item.fonction,
-        anneeDebut: item.date,
-        anneeFin: null,
-        contenu: item.description,
-        titre: item.societe,
-        typeDuree: item.typeDuree
+    constructor(public dialog: MatDialog, private db: AngularFireDatabase) {
+        this.db.list('experiences').subscribe(k => {
+            this.experiencesListe = k;
+            this.enCours = this.experiencesListe.filter(element => {
+                return element.id === this.experiencesListe.length - 1;
+            })[0];
+        });
     }
 
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '500px',
-      data: {item: item, image: image},
-    });
+    ngOnInit() {
+    }
 
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
+    clickImage(id: number, image: string) {
+        let item: ExperienceModel;
+        this.experiencesListe.forEach(element => {
+            if (element.id === id) {
+                item = element;
+            }
+        });
+        const data: DonneesModalExperienceModel = {
+            duree: item.duree,
+            fonction: item.fonction,
+            anneeDebut: item.date,
+            anneeFin: null,
+            contenu: item.description,
+            titre: item.societe,
+            typeDuree: item.typeDuree
+        }
+
+        const dialogRef = this.dialog.open(DialogComponent, {
+            width: '500px',
+            data: { item: item, image: image },
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+        });
+    }
 
 }
 

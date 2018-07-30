@@ -59,7 +59,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
         ExperienceComponent,
         HomePresentationComponent,
         HomeCvComponent,
-        HomeVoyageComponent,
+        HomeVoyageComponent
     ],
     imports: [
         BrowserModule,

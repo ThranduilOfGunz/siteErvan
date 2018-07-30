@@ -22,3 +22,26 @@
     padding-top: 4%;
     padding-bottom: 1%;
 }
+
+.pointeur{
+    cursor: pointer;
+}
+
+.passage:hover{
+    border-radius: 20%;
+    background-color: grey;
+}
+
+.header-image {
+    background-image: url('../../../assets/images/capge.png');
+    background-size: cover;
+  }
+
+  .enCoursEnTete{
+    padding-left: 50%;
+    padding-top: 30%;
+  }
+
+  .enCoursContenu{
+    padding-left: 20%;
+  }
