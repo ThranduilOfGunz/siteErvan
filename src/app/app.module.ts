@@ -19,7 +19,8 @@ import {
     MatToolbarModule,
     MatDialogModule,
     MatCardSubtitle,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatGridListModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -80,6 +81,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
         MatDialogModule,
         ScrollDispatchModule,
         MatSnackBarModule,
+        MatGridListModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
