@@ -18,3 +18,16 @@
 .mat-grid-tile:hover {
   cursor: pointer;
 }
+
+.onHover:hover .cache{
+  opacity: 1;
+  transition: all 0.3s linear;
+  visibility: visible;
+}
+
+.cache{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  word-wrap: break-word;
+}
