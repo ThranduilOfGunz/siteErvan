@@ -1,6 +1,19 @@
 <div class="col-md-12">
     <div class="row">
-        <div class="offset-md-2 col-md-8 topStyle">
+        <div class="col-md-1">
+            <button mat-button onclick="document.getElementById('fileToUpload')">
+                <label for="fileToUpload">
+                    <mat-icon>attach_file</mat-icon>
+                </label>
+            </button>
+            <button mat-button (click)="upload()">
+                <input id="fileToUpload" (change)="getFile($event)" type="file" style="display:none;">
+                <mat-icon>add</mat-icon>
+            </button>
+
+            <button mat-button (click)="ajouterArticle()"><mat-icon class="mat-18">cloud_upload</mat-icon></button>
+        </div>
+        <div class="offset-md-1 col-md-8 topStyle">
             <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
                 <div *ngFor="let item of photoListe | async">
                     <mat-grid-tile class="onHover">
@@ -14,19 +27,5 @@
                 </div>
             </mat-grid-list>
         </div>
-
     </div>
-    <div class="row">
-        <div class="offset-md-10 col-md-2">
-            <button mat-button onclick="document.getElementById('fileToUpload')">
-                <label for="fileToUpload">
-                    <mat-icon>attach_file</mat-icon>
-                </label>
-            </button>
-            <input id="fileToUpload" (change)="getFile($event)" type="file" style="display:none;">
-        </div>
-    </div>
-    <button mat-button (click)="upload()">
-        <mat-icon>add</mat-icon>
-    </button>
 </div>

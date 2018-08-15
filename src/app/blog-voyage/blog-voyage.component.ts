@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material';
 import { PhotoModel } from './../shared/models/photo.model';
 import {
     AngularFireDatabase,
@@ -6,6 +7,7 @@ import {
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ModalAjoutArcticleComponent } from '../shared/components/modales/modal-ajout-arcticle/modal-ajout-arcticle.component';
 
 @Component({
     selector: 'app-blog-voyage',
@@ -25,11 +27,14 @@ export class BlogVoyageComponent implements OnInit {
     constructor(
         private http: HttpClient,
         private db: AngularFireDatabase,
-        private sanitizer: DomSanitizer
+        private sanitizer: DomSanitizer,
+        public dialog: MatDialog
     ) {
         this.photoListe = this.db.list('photosBlog');
         this.photoListe.forEach(element => {
-            this.numeroImage = element.length;
+            if (element) {
+                this.numeroImage = element.length;
+            }
             element.forEach(res => {
                 this.creerUrlImage(res);
             });
@@ -37,8 +42,6 @@ export class BlogVoyageComponent implements OnInit {
     }
 
     ngOnInit() {}
-
-    ajouterArticle(event) {}
 
     creerUrlImage(item: PhotoModel): any {
         const image = new Image();
@@ -67,13 +70,20 @@ export class BlogVoyageComponent implements OnInit {
 
     upload() {
         const photo: PhotoModel = new PhotoModel();
-
         photo.date = String(new Date());
         photo.description = 'Ajout description';
         photo.id = this.numeroImage;
         photo.lieu = 'Paris';
         photo.photo = this.image64;
-
         this.db.database.ref('photosBlog/photo' + this.numeroImage).set(photo);
+    }
+
+    ajouterArticle() {
+        const dialogRef = this.dialog.open(ModalAjoutArcticleComponent, {
+            width: '70%',
+            height: '70%'
+        });
+
+        dialogRef.afterClosed().subscribe(result => {});
     }
 }
