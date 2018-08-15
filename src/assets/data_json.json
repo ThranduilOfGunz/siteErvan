@@ -128,5 +128,13 @@
 			"fonction": "Ingénieur Logiciel",
 			"description": "Suite à mon stage j'ai continué l'aventure chez Capgemini. Je suis actuellement sur la refonte d'une application gouvernemental. Ce projet me permet de consolider mes capacité en Angular mais aussi d'apprendre de nouvelles techniques de développement. "
 		}
-	}
+	},
+	"photosBlog":
+		{
+			"id": 0,
+			"date": null,
+			"photo": null,
+			"lieu": "Rennes",
+			"description": "Photo Prise à rennes"	
+		}
 }

@@ -2,15 +2,31 @@
     <div class="row">
         <div class="offset-md-2 col-md-8 topStyle">
             <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
-                    <mat-grid-tile class="onHover">1
-                            <mat-grid-tile-footer class="cache"><a>Bonjour</a></mat-grid-tile-footer>
+                <div *ngFor="let item of photoListe | async">
+                    <mat-grid-tile class="onHover">
+                        <img [src]="item.photo" class="redimmensionner" />
+                        <mat-grid-tile-footer class="cache">
+                            <h6>{{item.lieu}}</h6>
+                            <br>
+                            <a>{{item.date | date}}</a>
+                        </mat-grid-tile-footer>
                     </mat-grid-tile>
-                    <mat-grid-tile>
-                            <img src="../../assets/images/hogwarts_wallpapers.jpg"/>
-                    </mat-grid-tile>
-                    <mat-grid-tile>3</mat-grid-tile>
-                    <mat-grid-tile>4</mat-grid-tile>
+                </div>
             </mat-grid-list>
         </div>
+
     </div>
+    <div class="row">
+        <div class="offset-md-10 col-md-2">
+            <button mat-button onclick="document.getElementById('fileToUpload')">
+                <label for="fileToUpload">
+                    <mat-icon>attach_file</mat-icon>
+                </label>
+            </button>
+            <input id="fileToUpload" (change)="getFile($event)" type="file" style="display:none;">
+        </div>
+    </div>
+    <button mat-button (click)="upload()">
+        <mat-icon>add</mat-icon>
+    </button>
 </div>

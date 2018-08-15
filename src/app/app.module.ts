@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireStorageModule } from 'angularfire2/storage';
@@ -82,6 +83,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
         ScrollDispatchModule,
         MatSnackBarModule,
         MatGridListModule,
+        HttpClientModule,
         AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
