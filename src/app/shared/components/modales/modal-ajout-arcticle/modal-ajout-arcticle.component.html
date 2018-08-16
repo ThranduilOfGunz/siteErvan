@@ -1,28 +1,48 @@
 <div class="col-md-12">
-    <div class="row">
-        <div class="col-md-4">
-            <mat-form-field>
-                <input matInput placeholder="Titre">
-            </mat-form-field>
+    <form [formGroup]="formulaireAjoutArticle">
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field>
+                    <input matInput formControlName="titre" placeholder="Titre">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field>
+                    <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3">
+                <mat-form-field>
+                    <input matInput formControlName="lieu" placeholder="Lieu">
+                </mat-form-field>
+            </div>
+            <div class="col-md-1">
+                <button mat-fab [disabled]="formulaireAjoutArticle.invalid || !image64">Basic</button>
+            </div>
         </div>
-        <div class="col-md-4">
-            <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+        <div class="row espaceTop">
+            <div class="col-md-1 ">
+                <button mat-button type="button" onclick="document.getElementById('fichier')">
+                    <label for="fichier">
+                        <mat-icon>attach_file</mat-icon>
+                    </label>
+                </button>
+                <input id="fichier" (change)="getFile($event)" type="file" style="display:none;">
+            </div>
+            <div class="col-md-4">
+                <mat-grid-list *ngIf="photoSelectionnee" cols="1" rowHeight="1:1">
+                    <mat-grid-tile>
+                        <img [src]="image64" class="redimmensionner">
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+            <div class="col-md-7">
+                <mat-form-field style="width: 100%">
+                    <textarea matInput maxRows="10" formControlName="description" placeholder="Description"></textarea>
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <div class="col-md-4 espaceTop">
-        <input  (change)="getFile($event)" type="file" >
-        <mat-grid-list *ngIf="photoSelectionnee" cols="2" rowHeight="3:2" gutterSize="5%">
-            <mat-grid-tile>
-                <img [src]="image64" class="redimmensionner">
-            </mat-grid-tile>
-        </mat-grid-list>
-        <!-- <button mat-button (click)="upload()">
-            <input id="fileToUpload" (change)="getFile($event)" type="file" style="display:none;">
-            <mat-icon>add</mat-icon>
-        </button> -->
-    </div>
+    </form>
 </div>

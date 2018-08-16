@@ -21,23 +21,16 @@ export class ModalAjoutArcticleComponent implements OnInit {
     }
 
     initialisationFormulaire() {
-        const photoControl = new FormControl(
-            { value: '' },
-            Validators.required
-        );
         const titreControl = new FormControl(
-            { value: '' },
-            Validators.required
+            '', Validators.required
         );
-        const idControl = new FormControl({ value: '' }, Validators.required);
         const descriptionControl = new FormControl(
-            { value: '' },
+            '',
             Validators.required
         );
-        const dateControl = new FormControl({ value: '' }, Validators.required);
-        const lieuControl = new FormControl({ value: '' }, Validators.required);
+        const dateControl = new FormControl('', Validators.required);
+        const lieuControl = new FormControl('', Validators.required);
         this.formulaireAjoutArticle = new FormGroup({
-            photo: photoControl,
             titre: titreControl,
             description: descriptionControl,
             date: dateControl,

@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,7 +21,9 @@ import { ModalAjoutArcticleComponent } from './components/modales/modal-ajout-ar
         MatIconModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatGridListModule
+        MatGridListModule,
+        FormsModule,
+        ReactiveFormsModule,
 
   ],
   declarations: [DialogComponent,  ModalAjoutArcticleComponent, SnackBarComponent, ModalAjoutArcticleComponent],

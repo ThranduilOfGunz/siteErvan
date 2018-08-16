@@ -6,3 +6,7 @@
 .redimmensionner{
     height: inherit;
 }
+
+.droite{
+    text-align: right;
+}
