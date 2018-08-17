@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { CvComponent } from './cv/cv.component';
 import { EducationComponent } from './education/education.component';
 import { HomeComponent } from './home/home.component';
@@ -11,7 +12,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'job', component: EducationComponent },
   { path: 'cv', component: CvComponent },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

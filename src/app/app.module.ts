@@ -46,6 +46,8 @@ import { HomePresentationComponent } from './home/home-presentation/home-present
 import { HomeCvComponent } from './home/home-cv/home-cv.component';
 import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -61,7 +63,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
         ExperienceComponent,
         HomePresentationComponent,
         HomeCvComponent,
-        HomeVoyageComponent
+        HomeVoyageComponent,
+        DetailArticleComponent,
+        NotFoundComponent
     ],
     imports: [
         BrowserModule,
