@@ -19,7 +19,7 @@
                 </mat-form-field>
             </div>
             <div class="col-md-1">
-                <button mat-fab [disabled]="formulaireAjoutArticle.invalid || !image64">Basic</button>
+                <button mat-fab (click)="upload()" [disabled]="formulaireAjoutArticle.invalid || !image64">Basic</button>
             </div>
         </div>
         <div class="row espaceTop">
