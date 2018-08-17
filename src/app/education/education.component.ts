@@ -36,7 +36,6 @@ export class EducationComponent implements OnInit {
             } else {
                 this.video = null;
             }
-
             this.titreSelection = item.description;
             this.detailSelection = item.descriptionComplémentaire;
         }
