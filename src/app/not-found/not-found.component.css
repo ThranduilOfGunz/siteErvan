@@ -1,0 +1,11 @@
+.bg {
+    background-image: url('../../assets/images/gandalf404.jpg');
+    height:63.1em; width:auto;
+    background-position:50% 50%;
+}
+
+.design404{
+    color: whitesmoke;
+    padding-top: 19%;
+    padding-left: 10%
+}
