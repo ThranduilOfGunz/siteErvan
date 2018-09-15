@@ -16,6 +16,11 @@
         <div class="offset-md-1 col-md-9">
             <font size="4">{{article.description}}</font>
         </div>
+        <div class="col-md-1">
+            <button mat-button (click)="supprimerArticle(article.id)">
+                <mat-icon class="redimmensionner">add_box</mat-icon>
+            </button>
+        </div>
     </div>
 
 </div>

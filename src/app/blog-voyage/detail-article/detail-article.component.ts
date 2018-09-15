@@ -1,3 +1,4 @@
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { PhotoModel } from './../../shared/models/photo.model';
 import { ArticleService } from './../../shared/services/article.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,12 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailArticleComponent implements OnInit {
     article: PhotoModel;
-    constructor(private articleService: ArticleService) {}
+    constructor(
+        private articleService: ArticleService,
+        private db: AngularFireDatabase
+    ) {}
 
     ngOnInit() {
         this.articleService.articleObservable.subscribe(article => {
             this.article = article;
-            this.article.date = (article.date);
+            this.article.date = article.date;
         });
+    }
+
+    supprimerArticle(id: any) {
+        this.db.database.ref('photosBlog/photo' + id).remove();
     }
 }
