@@ -2,6 +2,7 @@ import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { PhotoModel } from './../../shared/models/photo.model';
 import { ArticleService } from './../../shared/services/article.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-detail-article',
@@ -12,7 +13,8 @@ export class DetailArticleComponent implements OnInit {
     article: PhotoModel;
     constructor(
         private articleService: ArticleService,
-        private db: AngularFireDatabase
+        private db: AngularFireDatabase,
+        private router: Router
     ) {}
 
     ngOnInit() {
@@ -24,5 +26,10 @@ export class DetailArticleComponent implements OnInit {
 
     supprimerArticle(id: any) {
         this.db.database.ref('photosBlog/photo' + id).remove();
+        this.retour();
+    }
+
+    retour() {
+        this.router.navigate(['blog-voyage']);
     }
 }
