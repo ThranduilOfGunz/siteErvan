@@ -23,6 +23,7 @@ export class BlogVoyageComponent implements OnInit {
     sanitizedUrl: any;
     image64: any;
     numeroImage: number;
+    chargement = true;
 
     photoListe: FirebaseListObservable<PhotoModel[]>;
 
@@ -37,11 +38,12 @@ export class BlogVoyageComponent implements OnInit {
         this.photoListe = this.db.list('photosBlog');
         this.photoListe.forEach(element => {
             if (element) {
-                this.numeroImage = element.length + 1;
+                this.numeroImage = element[element.length - 1].id + 1;
             }
             element.forEach(res => {
                 this.creerUrlImage(res);
             });
+            this.chargement = false;
         });
     }
 

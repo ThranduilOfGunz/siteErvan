@@ -35,3 +35,9 @@
 .redimmensionner{
     height: inherit;
 }
+
+
+.chargement{
+    position: absolute;
+    padding-top: 14%;
+}
