@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ModalAjoutArcticleComponent } from '../shared/components/modales/modal-ajout-arcticle/modal-ajout-arcticle.component';
+import { Router } from '@angular/router';
+import { ArticleService } from '../shared/services/article.service';
 
 @Component({
     selector: 'app-blog-voyage',
@@ -28,7 +30,9 @@ export class BlogVoyageComponent implements OnInit {
         private http: HttpClient,
         private db: AngularFireDatabase,
         private sanitizer: DomSanitizer,
-        public dialog: MatDialog
+        public dialog: MatDialog,
+        private router: Router,
+        private articleService: ArticleService
     ) {
         this.photoListe = this.db.list('photosBlog');
         this.photoListe.forEach(element => {
@@ -57,5 +61,11 @@ export class BlogVoyageComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe(result => {});
+    }
+
+    goToDetailArticle(item: PhotoModel) {
+        console.log(item);
+        this.articleService.updateData(item);
+        this.router.navigate(['/details-article']);
     }
 }
