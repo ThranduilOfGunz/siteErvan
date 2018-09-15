@@ -37,7 +37,7 @@ export class BlogVoyageComponent implements OnInit {
         this.photoListe = this.db.list('photosBlog');
         this.photoListe.forEach(element => {
             if (element) {
-                this.numeroImage = element.length;
+                this.numeroImage = element.length + 1;
             }
             element.forEach(res => {
                 this.creerUrlImage(res);
