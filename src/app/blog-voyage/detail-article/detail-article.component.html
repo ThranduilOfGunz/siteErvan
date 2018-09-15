@@ -1,11 +1,21 @@
-<img [src]="article.photo" class="formatEcran" />
-
 <div class="col-md-12">
     <div class="row">
-        <h2>{{article.titre}}, {{article.lieu}} le {{article.date | date: 'dd/MM/yyyy'}}</h2>
+        <img [src]="article.photo" class="formatEcran" />
+    </div>
+    <div class="row paddingtop">
+        <div class="offset-md-4">
+            <h2>{{article.titre}}, {{article.lieu}} le {{article.date | date: 'dd/MM/yyyy'}}</h2>
+        </div>
     </div>
     <div class="row">
-        <font size="6">{{article.description}}</font>
+        <div class="offset-md-3 col-md-5">
+            <hr style="border: 0.5px solid#7c7b7b;" />
+        </div>
+    </div>
+    <div class="row paddingtop">
+        <div class="offset-md-1 col-md-9">
+            <font size="4">{{article.description}}</font>
+        </div>
     </div>
 
 </div>
