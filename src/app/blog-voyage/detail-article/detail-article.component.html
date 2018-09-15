@@ -1,3 +1,11 @@
-<p>
-  detail-article works!
-</p>
+<img [src]="article.photo" class="formatEcran" />
+
+<div class="col-md-12">
+    <div class="row">
+        <h2>{{article.titre}}, {{article.lieu}} le {{article.date | date: 'dd/MM/yyyy'}}</h2>
+    </div>
+    <div class="row">
+        <font size="6">{{article.description}}</font>
+    </div>
+
+</div>
