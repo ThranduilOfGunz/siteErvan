@@ -48,6 +48,7 @@ import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ArticleService } from './shared/services/article.service';
 @NgModule({
     declarations: [
         AppComponent,
@@ -93,7 +94,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
         AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
-    providers: [AngularFireDatabase],
+    providers: [AngularFireDatabase, ArticleService],
     exports: [],
     bootstrap: [AppComponent]
 })
