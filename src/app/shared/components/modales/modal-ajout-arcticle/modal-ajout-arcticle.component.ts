@@ -70,5 +70,6 @@ export class ModalAjoutArcticleComponent implements OnInit {
         photo.id = this.data.idImage;
         photo.photo = this.image64;
         this.db.database.ref('photosBlog/photo' + this.data.idImage).set(photo);
+        this.dialogRef.close();
     }
 }
