@@ -1,25 +1,24 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FirebaseService } from './shared/services/firebase.service';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {ParallaxModule, ParallaxConfig} from 'ngx-parallax';
+import {ParallaxModule} from 'ngx-parallax';
 
 import {
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    MatCard,
     MatCardModule,
     MatToolbarModule,
     MatDialogModule,
-    MatCardSubtitle,
     MatSnackBarModule,
     MatGridListModule
 } from '@angular/material';
@@ -30,7 +29,6 @@ import { EducationComponent } from './education/education.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';
-import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './/app-routing.module';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { HomeComponent } from './home/home.component';
@@ -45,7 +43,6 @@ import { ExperienceComponent } from './cv/experience/experience.component';
 import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
 import { HomeCvComponent } from './home/home-cv/home-cv.component';
 import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
@@ -94,7 +91,7 @@ import { ArticleService } from './shared/services/article.service';
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
         AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
-    providers: [AngularFireDatabase, ArticleService],
+    providers: [AngularFireDatabase, ArticleService, FirebaseService],
     exports: [],
     bootstrap: [AppComponent]
 })
