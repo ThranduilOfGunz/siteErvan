@@ -1,6 +1,5 @@
-import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { FirebaseService } from './../../../services/firebase.service';
 import { PhotoModel } from './../../../models/photo.model';
-import { DialogComponent } from './../dialog/dialog.component';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -17,7 +16,7 @@ export class ModalAjoutArcticleComponent implements OnInit {
 
     constructor(
         public dialogRef: MatDialogRef<ModalAjoutArcticleComponent>,
-        private db: AngularFireDatabase,
+        private firebaseService: FirebaseService,
         @Inject(MAT_DIALOG_DATA) public data: { idImage: number }
     ) {}
 
@@ -69,7 +68,8 @@ export class ModalAjoutArcticleComponent implements OnInit {
         ).value;
         photo.id = this.data.idImage;
         photo.photo = this.image64;
-        this.db.database.ref('photosBlog/photo' + this.data.idImage).set(photo);
+
+        this.firebaseService.enregistrerArticle(this.data.idImage, photo);
         this.dialogRef.close();
     }
 }
