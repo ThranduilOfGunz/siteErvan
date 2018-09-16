@@ -1,9 +1,9 @@
 *[parallax] {
-    height: 500px;
+    height: 600px;
 
     background-size: 100%;
 }
 
 #exemple {
-    background-image: url('../../../assets/images/australie_sidney.jpg');
+    background-image: url('../../../assets/images/australie.jpg');
 }
