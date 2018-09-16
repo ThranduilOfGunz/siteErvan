@@ -1,12 +1,7 @@
+import { FirebaseService } from './../shared/services/firebase.service';
 import { MatDialog } from '@angular/material';
 import { PhotoModel } from './../shared/models/photo.model';
-import {
-    AngularFireDatabase,
-    FirebaseListObservable
-} from 'angularfire2/database-deprecated';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { ModalAjoutArcticleComponent } from '../shared/components/modales/modal-ajout-arcticle/modal-ajout-arcticle.component';
 import { Router } from '@angular/router';
 import { ArticleService } from '../shared/services/article.service';
@@ -22,51 +17,47 @@ export class BlogVoyageComponent implements OnInit {
     imageToShow: any;
     sanitizedUrl: any;
     image64: any;
-    numeroImage: number;
+    numeroImage = 0;
     chargement = true;
 
-    photoListe: FirebaseListObservable<PhotoModel[]>;
+    photoListe: PhotoModel[];
 
     constructor(
-        private http: HttpClient,
-        private db: AngularFireDatabase,
-        private sanitizer: DomSanitizer,
         public dialog: MatDialog,
         private router: Router,
-        private articleService: ArticleService
-    ) {
-        this.photoListe = this.db.list('photosBlog');
-        this.photoListe.forEach(element => {
-            if (element) {
-                this.numeroImage = element[element.length - 1].id + 1;
+        private articleService: ArticleService,
+        private fireBaseService: FirebaseService
+    ) {}
+
+    ngOnInit() {
+        this.fireBaseService.getArticles().subscribe(
+            res => {
+                this.photoListe = res;
+                this.photoListe.forEach(element => {
+                    if (element.id >= this.numeroImage) {
+                        this.numeroImage = element.id + 1;
+                    }
+                });
+                this.chargement = false;
+            },
+            error => {},
+            () => {
+                this.chargement = false;
             }
-            element.forEach(res => {
-                this.creerUrlImage(res);
-            });
-            this.chargement = false;
-        });
-    }
-
-    ngOnInit() {}
-
-    creerUrlImage(item: PhotoModel): any {
-        const image = new Image();
-        image.src = item.photo;
-        item.photo = image.src;
+        );
     }
 
     ajouterArticle() {
         const dialogRef = this.dialog.open(ModalAjoutArcticleComponent, {
             width: '70%',
             height: '70%',
-            data : {idImage: this.numeroImage}
+            data: { idImage: this.numeroImage }
         });
 
         dialogRef.afterClosed().subscribe(result => {});
     }
 
     goToDetailArticle(item: PhotoModel) {
-        console.log(item);
         this.articleService.updateData(item);
         this.router.navigate(['/details-article']);
     }
