@@ -1,6 +1,22 @@
+.hauteur{
+    height: 50px;
+}
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.paddingText {
+    padding-top: 2%;
+}
+
+.iconeRedimenssion {
+    height: 90% !important;
+    margin-top: 4% !important;
+    cursor: pointer !important;
+}
+
+.right{
+    margin-left: 69%;
+    text-align: right;
+}
+
+.paddingTop{
+    padding-top: 1%;
 }
