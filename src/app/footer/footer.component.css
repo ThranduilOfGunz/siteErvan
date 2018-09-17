@@ -1,5 +1,5 @@
 .hauteur{
-    height: 50px;
+    height: 40px;
 }
 
 .paddingText {
@@ -13,10 +13,10 @@
 }
 
 .right{
-    margin-left: 69%;
-    text-align: right;
+    margin-left: auto;
 }
 
 .paddingTop{
     padding-top: 1%;
 }
+
