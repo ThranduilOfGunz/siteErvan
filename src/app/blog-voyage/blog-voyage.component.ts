@@ -1,3 +1,4 @@
+import { AuthentificationServiceService } from './../shared/services/authentification-service.service';
 import { FirebaseService } from './../shared/services/firebase.service';
 import { MatDialog } from '@angular/material';
 import { PhotoModel } from './../shared/models/photo.model';
@@ -21,13 +22,19 @@ export class BlogVoyageComponent implements OnInit {
     chargement = true;
 
     photoListe: PhotoModel[];
+    authentifie = false;
 
     constructor(
         public dialog: MatDialog,
         private router: Router,
         private articleService: ArticleService,
-        private fireBaseService: FirebaseService
-    ) {}
+        private fireBaseService: FirebaseService,
+        private auth: AuthentificationServiceService
+    ) {
+        this.auth.authentifie.subscribe(res => {
+            this.authentifie = res;
+        });
+    }
 
     ngOnInit() {
         this.fireBaseService.getArticles().subscribe(
@@ -60,5 +67,13 @@ export class BlogVoyageComponent implements OnInit {
     goToDetailArticle(item: PhotoModel) {
         this.articleService.updateData(item);
         this.router.navigate(['/details-article']);
+    }
+
+    login() {
+        this.auth.login();
+    }
+
+    logout() {
+        this.auth.logout();
     }
 }

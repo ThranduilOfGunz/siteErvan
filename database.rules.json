@@ -1,6 +1,11 @@
 {
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
+    "rules": {
+        "utilisateurs": {
+            "$uid": {
+                ".read": true,
+                ".write": "auth.uid === $uid",
+                ".validate": "newData.exists()"
+            }
+        }
+    }
 }

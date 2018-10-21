@@ -3,9 +3,15 @@
         <img src="../../assets/images/loader_lunettes.gif" />
     </div>
     <div *ngIf="!chargement" class=" row">
-        <div class="col-md-1">
-            <button mat-button (click)="ajouterArticle()">
+        <div class="col-md-3">
+            <button mat-button (click)="login()">
+                <mat-icon class="redimmensionner">sentiment_satisfied</mat-icon>
+            </button>
+            <button mat-button (click)="ajouterArticle()" [disabled]="!authentifie">
                 <mat-icon class="redimmensionner">add_box</mat-icon>
+            </button>
+            <button mat-button (click)="logout()">
+                <mat-icon class="redimmensionner">sentiment_very_dissatisfied</mat-icon>
             </button>
         </div>
         <div class="offset-md-1 col-md-8 topStyle">

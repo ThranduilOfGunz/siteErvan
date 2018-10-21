@@ -1,3 +1,4 @@
+import { AuthentificationServiceService } from './shared/services/authentification-service.service';
 import { FirebaseService } from './shared/services/firebase.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
@@ -86,12 +87,12 @@ import { ArticleService } from './shared/services/article.service';
         MatSnackBarModule,
         MatGridListModule,
         HttpClientModule,
-        AngularFireModule.initializeApp(environment.firebase, 'ervan-site-web'),
+        AngularFireModule.initializeApp(environment.firebase, 'siteervan'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
         AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
-    providers: [AngularFireDatabase, ArticleService, FirebaseService],
+    providers: [AngularFireDatabase, ArticleService, FirebaseService, AuthentificationServiceService],
     exports: [],
     bootstrap: [AppComponent]
 })

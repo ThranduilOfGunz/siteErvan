@@ -1,3 +1,4 @@
+import { AuthentificationServiceService } from './../../shared/services/authentification-service.service';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { PhotoModel } from './../../shared/models/photo.model';
 import { ArticleService } from './../../shared/services/article.service';
@@ -11,13 +12,18 @@ import { Router } from '@angular/router';
 })
 export class DetailArticleComponent implements OnInit {
     article: PhotoModel;
+    auth: boolean;
     constructor(
         private articleService: ArticleService,
         private db: AngularFireDatabase,
-        private router: Router
+        private router: Router,
+        private serviceAuth: AuthentificationServiceService
     ) {}
 
     ngOnInit() {
+        this.serviceAuth.authentifie.subscribe(res => {
+            this.auth = res;
+        });
         this.articleService.articleObservable.subscribe(article => {
             this.article = article;
             this.article.date = article.date;
