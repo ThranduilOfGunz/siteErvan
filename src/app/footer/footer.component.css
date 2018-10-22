@@ -1,4 +1,4 @@
-.hauteur{
+.hauteur {
     height: 40px;
 }
 
@@ -12,11 +12,10 @@
     cursor: pointer !important;
 }
 
-.right{
+.right {
     margin-left: auto;
 }
 
-.paddingTop{
+.paddingTop {
     padding-top: 1%;
 }
-
