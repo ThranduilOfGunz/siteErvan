@@ -76,7 +76,6 @@ import { ModaleAuthentificationComponent } from './shared/components/modales/mod
         MatInputModule,
         MatButtonModule,
         MatSelectModule,
-        MatIconModule,
         MatCardModule,
         MatToolbarModule,
         MatIconModule,

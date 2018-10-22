@@ -5,93 +5,89 @@
 @include mat-core();
 
 $primary: mat-palette($mat-lime, 500);
-$accent:  mat-palette($mat-lime, 500, A200, A400);
-$warn:    mat-palette($mat-red, 500);
+$accent: mat-palette($mat-lime, 500, A200, A400);
+$warn: mat-palette($mat-red, 500);
 
 $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 
-
-
 .navyBlue {
-  background-color: #0F1626;
+    background-color: #0f1626;
 }
 
 .navyBluePolice {
-  color: #0F1626;
+    color: #0f1626;
 }
 
-.eggshell{
-  background-color: #F5F5F5;
+.eggshell {
+    background-color: #f5f5f5;
 }
 
-.eggshellPolice{
-  color: #F5F5F5;
+.eggshellPolice {
+    color: #f5f5f5;
 }
 
-.leather{
-  background-color: #AB987A;
+.leather {
+    background-color: #ab987a;
 }
 
-.coral{
-  background-color: #ec9f0d;
+.coral {
+    background-color: #ec9f0d;
 }
 
-.police{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+.police {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .fontWhite {
-  color: white;
+    color: white;
 }
 
-.noPadding{
-  padding: 0;
-margin: 0;
+.noPadding {
+    padding: 0;
+    margin: 0;
 }
 
 md-tab-group {
     background-color: #0f1626;
 }
 
-
 .mat-tab-label {
     width: 100%;
 }
 
-
-.mat-tab-label.mat-tab-label-active{
-    background-color:  #0f1626!important;
-    color: #F5F5F5!important;
+.mat-tab-label.mat-tab-label-active {
+    background-color: #0f1626 !important;
+    color: #f5f5f5 !important;
 }
 
 .mat-ink-bar {
-    background-color: #ec9f0d!important;
+    background-color: #ec9f0d !important;
 }
 
-.back{
+.back {
     width: stretch;
 }
 
-.scroll{
-  overflow: auto;
+.scroll {
+    overflow: auto;
 }
 
 .paddingtop {
-  padding-top: 1%;
+    padding-top: 1%;
 }
 
-.paddingLoader{
-  position: absolute;
-	top: 25%;
+.paddingLoader {
+    position: absolute;
+    top: 25%;
 }
 
-.afficherCurseur :hover{
+.afficherCurseur :hover {
     cursor: pointer;
 }
 
-.center{
-  text-align: center;
+.center {
+    text-align: center;
 }
 

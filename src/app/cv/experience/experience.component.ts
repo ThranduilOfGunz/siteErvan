@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { DialogComponent } from '../../shared/components/modales/dialog/dialog.component';
 import { DonneesModalExperienceModel } from '../../shared/models/donnees-modal-experience.model';
-import { SnackBarComponent } from '../../shared/components/snack-bar/snack-bar.component';
 
 @Component({
     selector: 'app-experience',
