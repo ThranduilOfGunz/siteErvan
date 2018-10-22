@@ -21,9 +21,9 @@
         <div class="col-md-10 justifier">
             <font size="4">{{article.description}}</font>
         </div>
-        <div class="col-md-1">
-            <button mat-button [disabled]="!auth" (click)="supprimerArticle(article.id)">
-                <mat-icon class="redimmensionner">add_box</mat-icon>
+        <div class="col-md-1 positionBoutonRetour">
+            <button mat-fab class="rgbRed" [disabled]="!auth" (click)="supprimerArticle(article.id)">
+                <mat-icon class="redimmensionner">delete_forever</mat-icon>
             </button>
         </div>
     </div>

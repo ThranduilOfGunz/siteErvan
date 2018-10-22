@@ -12,3 +12,11 @@
     text-align: justify;
 }
 
+.rgbBlue {
+    background-color: rgb(135, 206, 250);
+}
+
+.rgbRed {
+    background-color: rgb(255, 0, 0);
+}
+
