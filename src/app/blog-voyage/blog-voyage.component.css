@@ -3,12 +3,24 @@
 }
 
 .topStyle {
-  padding-top: 5%;
+  padding-top: 1%;
+}
+
+.bottomStyle {
+    padding-bottom: 5%;
 }
 
 
 .background{
   background-color: white;
+}
+
+.rgbBlue {
+    background-color: rgb(135, 206, 250);
+}
+
+.rgbRed {
+    background-color: rgb(255, 0, 0);
 }
 
 .mat-grid-tile {
@@ -41,3 +53,14 @@
     position: absolute;
     padding-top: 14%;
 }
+
+.positionFixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.height{
+    height: 5%;
+}
+

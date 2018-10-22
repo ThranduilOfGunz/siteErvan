@@ -21,6 +21,8 @@ export class BlogVoyageComponent implements OnInit {
     numeroImage = 0;
     chargement = true;
 
+    blue = '#87CEFA';
+    red = '#FF0000';
     photoListe: PhotoModel[];
     authentifie = false;
 

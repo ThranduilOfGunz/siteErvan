@@ -2,31 +2,34 @@
     <div *ngIf="chargement" class="row col-md-4 offset-md-4 chargement">
         <img src="../../assets/images/loader_lunettes.gif" />
     </div>
-    <div *ngIf="!chargement" class=" row">
-        <div class="col-md-3">
-            <button mat-button (click)="login()">
-                <mat-icon class="redimmensionner">sentiment_satisfied</mat-icon>
-            </button>
-            <button mat-button (click)="ajouterArticle()" [disabled]="!authentifie">
-                <mat-icon class="redimmensionner">add_box</mat-icon>
-            </button>
-            <button mat-button (click)="logout()">
-                <mat-icon class="redimmensionner">sentiment_very_dissatisfied</mat-icon>
-            </button>
+    <div *ngIf="!chargement">
+        <div class="row bottomStyle">
+            <div class="offset-md-11 topStyle">
+                <button *ngIf="!authentifie" class="rgbBlue" mat-fab (click)="login()">
+                    <mat-icon class="redimmensionner">person</mat-icon>
+                </button>
+                <button *ngIf="authentifie"  class="rgbRed" mat-fab (click)="logout()">
+                    <mat-icon class="redimmensionner">person_outline</mat-icon>
+                </button>
+                <button mat-fab  class="rgbBlue" [disabled]="!authentifie" (click)="ajouterArticle()">
+                    <mat-icon class="redimmensionner">add</mat-icon>
+                </button>
+            </div>
+            <div class="offset-md-2 col-md-8">
+                <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
+                    <div *ngFor="let item of photoListe">
+                        <mat-grid-tile title="{{item.titre}}" (click)="goToDetailArticle(item)" class="onHover">
+                            <img [src]="item.photo" class="redimmensionner" />
+                            <mat-grid-tile-footer class="cache">
+                                <h6>{{item.lieu }} </h6>
+                                <br>
+                                <a *ngIf="item.date">{{item.date | date: ", dd/MM/yyyy"}}</a>
+                            </mat-grid-tile-footer>
+                        </mat-grid-tile>
+                    </div>
+                </mat-grid-list>
+            </div>
         </div>
-        <div class="offset-md-1 col-md-8 topStyle">
-            <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
-                <div *ngFor="let item of photoListe">
-                    <mat-grid-tile title="{{item.titre}}" (click)="goToDetailArticle(item)" class="onHover">
-                        <img [src]="item.photo" class="redimmensionner" />
-                        <mat-grid-tile-footer class="cache">
-                            <h6>{{item.lieu }} </h6>
-                            <br>
-                            <a *ngIf="item.date">{{item.date | date: ", dd/MM/yyyy"}}</a>
-                        </mat-grid-tile-footer>
-                    </mat-grid-tile>
-                </div>
-            </mat-grid-list>
-        </div>
+        <app-footer class="background positionFixed"></app-footer>
     </div>
 </div>
