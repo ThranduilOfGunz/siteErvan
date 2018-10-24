@@ -19,10 +19,6 @@ install:
 script:
 - npm run ci:travis
 
-env:
-  global:
-    secure: "nZ6sqsbjf+0x8T6XmJiYHH+fJkbr0hnudOOOF1d/q7Qpo2itSzeUjWbnHsrx1nu2/NqFQw6MzkfeR7CfXlddg67z9+QbWjdo5qb7FtZpb8b378ZAnFJ4lsZ6jnALUSZbUM/kinRM8DkL0qGC2syIeE/SGYSxuqPMg2jrv0LlMuLp4XXJvktnaE2cW1bGGDroWPuCPlc9BBi/7YOfVp1/xw1Y0XxvynY6SXiYGB9auiRcEo9bdeu/LuZ7Y3wAi9z3Ed2LOseur2KbGxX9w/aydhRJrE63CFKYhVBRmk6Og9ETm0ZOp6Mb++1EE4sV8y6fvtdXlzlzlHc3xXJL9YRa+VBDCoLUyQf3bTDpC+pDJ4G8e6NbK5ETGmLS6CvTgykpTxtQ2iBQMpbEx1XxK3I9sDUVsw4bFX9NrmvNfg26226UtwvmhGYmNm+yDPUoPnZ8L+ghfNZY7ltHgfMvguMwfvTn/L5vMt22djMokt6jnXfnvNufL/qHDdQAn3uhdyu58pa2LvWLfowPjakwlQtfZtLPTjJ2cIggSz+YaSW40IhF+pavdLkYbA7XJIBNFOXyui9K2dOb513UwbUmj6M4H+2Ji4QkyZtj1yXxo4xhNgpNO7C+oxncpYXOd1PzXeZ2nq7YO4OUx2UmH5SN3G2QlGxULfBMEg/7NvAXySNVbmU="
-
 deploy:
   provider: firebase
   on:
