@@ -10,14 +10,22 @@ node_js:
 - 10.6.0
 matrix:
   fast_finish: true
+
+  branches:
+    only:
+        -master
+
 before_install:
 - npm cache verify
 - npm prune
 - npm update
 install:
 - npm install
+
+
 script:
 - npm run ci:travis
+- ng build --prod
 
 after_success:
 - firebase deploy --token $FIREBASE_TOKEN
