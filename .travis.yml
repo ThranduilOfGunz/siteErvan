@@ -25,7 +25,7 @@ deploy:
   provider: firebase
   skip_cleanup: true
   on: 
-    all_branches: true
+    branch: true
   token:
     secure: j8uf4uv6wtUWRAXyVwbti2F9N65UYn9EOz6Y75596QuQNvov9Zovs7yTYE1WYq9R329fw/wu3eSIcn2ZoF3Qn8agE+SpX+DTwXKqvJZhqq+q3NwD9Sph4UvxlqulBW6T9c/WDOfn0R45j6SDnpkeq8ia8o5abU0dAJQhNVEWawEoHW3n/aGPIYEeH/Cfx9St1C3klyk7vAiKTERPueNivWjSRhf1aT3qIST/u33wKbbAjGVJw2XIs4Sd49Tc3Q3NaisDOkRQYIc4R4X38eaV5Ebx6u3YVm85DvIxwR8YhQZL1JHk+Oqqy8WkVjgJlHMc7Aa2zZEBl/IxaF2EJbI6E99WiS4bMVUiPSJmuCQPSAnUU2d7RLrE5we0mqOHW/MkJqThKCEwAzeRYJ837vB48yjVUfCX75dv+TEuBejPTOKhrPtWxDiXvngNykUzn7t0JU/um5Itvjb8JImjpKjf8KCY8jI8GjjCz0TN1Mr7HlX5oX7dmnHt8yYGW6ONkzAxw6hgSligrkCZd4dAhXq011YbvCOEIX4oU+D8rU07rHMfpTM+IafmxZ7QRJCTPV87Tc2duF+Qtv/D08t3D7OBtFSOi8fZ1qX4KyBpT7H6+F0FNuktSMWw+5HFQcXW5kwfnAFd+YL7NHiTHU43upaQ2xMOOw0T2imYLiUcvM94/Ao=
 env:
