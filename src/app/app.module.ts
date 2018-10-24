@@ -48,6 +48,8 @@ import { DetailArticleComponent } from './blog-voyage/detail-article/detail-arti
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
 import { ModaleAuthentificationComponent } from './shared/components/modales/modale-authentification/modale-authentification.component';
+
+
 @NgModule({
     declarations: [
         AppComponent,

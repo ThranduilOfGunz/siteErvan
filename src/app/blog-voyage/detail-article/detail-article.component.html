@@ -15,17 +15,17 @@
     <div class="row paddingtop">
         <div class="col-md-1 positionBoutonRetour">
             <button mat-fab color="#7c7b7b" (click)="retour()">
-                <mat-icon>arrow_back</mat-icon>
+                <i class="fa fa-arrow-left"></i>
             </button>
         </div>
         <div class="col-md-10 justifier">
             <font size="4">{{article.description}}</font>
         </div>
         <div class="col-md-1 positionBoutonRetour">
-            <button mat-fab class="rgbRed" [disabled]="!auth" (click)="supprimerArticle(article.id)">
-                <mat-icon class="redimmensionner">delete_forever</mat-icon>
+            <button mat-fab [hidden]="!auth" class="rgbRed" [disabled]="!auth" (click)="supprimerArticle(article.id)">
+                <i class="fa fa-trash"></i>
             </button>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

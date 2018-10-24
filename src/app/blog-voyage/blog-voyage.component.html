@@ -6,13 +6,13 @@
         <div class="row bottomStyle">
             <div class="offset-md-11 topStyle">
                 <button *ngIf="!authentifie" class="rgbBlue" mat-fab (click)="login()">
-                    <mat-icon class="redimmensionner">person</mat-icon>
+                    <i class="fa fa-user"></i>
                 </button>
                 <button *ngIf="authentifie"  class="rgbRed" mat-fab (click)="logout()">
-                    <mat-icon class="redimmensionner">person_outline</mat-icon>
+                        <i class="fa fa-user"></i>
                 </button>
-                <button mat-fab  class="rgbBlue" [disabled]="!authentifie" (click)="ajouterArticle()">
-                    <mat-icon class="redimmensionner">add</mat-icon>
+                <button mat-fab [hidden]="!authentifie" class="rgbBlue" [disabled]="!authentifie" (click)="ajouterArticle()">
+                        <i class="fa fa-plus-square"></i>
                 </button>
             </div>
             <div class="offset-md-2 col-md-8">
