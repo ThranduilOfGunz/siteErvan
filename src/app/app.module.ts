@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {ParallaxModule} from 'ngx-parallax';
+import { CountdownModule } from 'ngx-countdown';
 
 import {
     MatInputModule,
@@ -89,6 +90,7 @@ import { ModaleAuthentificationComponent } from './shared/components/modales/mod
         MatSnackBarModule,
         MatGridListModule,
         HttpClientModule,
+        CountdownModule,
         AngularFireModule.initializeApp(environment.firebase, 'siteervan'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
