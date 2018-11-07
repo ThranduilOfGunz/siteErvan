@@ -1,5 +1,6 @@
-.hauteur {
+.position {
     height: 40px;
+    padding-left: 0.1%;
 }
 
 .paddingText {
@@ -14,6 +15,7 @@
 
 .right {
     margin-left: auto;
+    padding-right: 2%;
 }
 
 .paddingTop {
@@ -22,4 +24,20 @@
 
 .clickable :hover{
     cursor: pointer;
+}
+
+.backGroundColor{
+    background-color:  #0f1626;
+}
+
+.white{
+    color: white;
+}
+
+.hauteurParties{
+    max-height: 100px;
+}
+
+.hauteur{
+    height: 100px;
 }

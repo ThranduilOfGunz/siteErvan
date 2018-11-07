@@ -8,11 +8,11 @@
                 <button *ngIf="!authentifie" class="rgbBlue" mat-fab (click)="login()">
                     <i class="fa fa-user"></i>
                 </button>
-                <button *ngIf="authentifie"  class="rgbRed" mat-fab (click)="logout()">
-                        <i class="fa fa-user"></i>
+                <button *ngIf="authentifie" class="rgbRed" mat-fab (click)="logout()">
+                    <i class="fa fa-user"></i>
                 </button>
                 <button mat-fab [hidden]="!authentifie" class="rgbBlue" [disabled]="!authentifie" (click)="ajouterArticle()">
-                        <i class="fa fa-plus-square"></i>
+                    <i class="fa fa-plus-square"></i>
                 </button>
             </div>
             <div class="offset-md-2 col-md-8">
@@ -30,6 +30,5 @@
                 </mat-grid-list>
             </div>
         </div>
-        <app-footer class="background positionFixed"></app-footer>
     </div>
 </div>
