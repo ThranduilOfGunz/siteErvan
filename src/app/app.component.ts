@@ -7,9 +7,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
-    title = 'app works!';
-
     constructor() {
         localStorage.removeItem('firebase:previous_websocket_failure');
     }
+
 }
