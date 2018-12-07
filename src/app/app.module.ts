@@ -1,6 +1,8 @@
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AuthentificationServiceService } from './shared/services/authentification-service.service';
 import { FirebaseService } from './shared/services/firebase.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { SharedModule } from './shared/shared.module';
 import { AngularFireStorageModule } from 'angularfire2/storage';
@@ -50,7 +52,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
 import { ModaleAuthentificationComponent } from './shared/components/modales/modale-authentification/modale-authentification.component';
 
-
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  }
 @NgModule({
     declarations: [
         AppComponent,
@@ -91,6 +95,13 @@ import { ModaleAuthentificationComponent } from './shared/components/modales/mod
         MatGridListModule,
         HttpClientModule,
         CountdownModule,
+        TranslateModule.forRoot({
+            loader: {
+              provide: TranslateLoader,
+              useFactory: (createTranslateLoader),
+              deps: [HttpClient],
+            }
+          }),
         AngularFireModule.initializeApp(environment.firebase, 'siteervan'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
