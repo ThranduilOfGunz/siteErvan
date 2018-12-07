@@ -31,11 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BannerComponent } from './intro/intro.component';
 import { EducationComponent } from './education/education.component';
 import { MenuComponent } from './menu/menu.component';
-import { FooterComponent } from './footer/footer.component';
-import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
-import { HomeComponent } from './home/home.component';
 import { ButtonLogoComponent } from './shared/components/buttons/button-logo/button-logo.component';
 import { ButtonMenuComponent } from './shared/components/buttons/button-menu/button-menu.component';
 import { environment } from './../environments/environment';
@@ -44,13 +41,9 @@ import { AngularFireModule } from 'angularfire2';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CvComponent } from './cv/cv.component';
 import { ExperienceComponent } from './cv/experience/experience.component';
-import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
-import { HomeCvComponent } from './home/home-cv/home-cv.component';
-import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
 import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
-import { ModaleAuthentificationComponent } from './shared/components/modales/modale-authentification/modale-authentification.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -61,16 +54,10 @@ export function createTranslateLoader(http: HttpClient) {
         BannerComponent,
         EducationComponent,
         MenuComponent,
-        FooterComponent,
-        BlogVoyageComponent,
-        HomeComponent,
         ButtonLogoComponent,
         ButtonMenuComponent,
         CvComponent,
         ExperienceComponent,
-        HomePresentationComponent,
-        HomeCvComponent,
-        HomeVoyageComponent,
         DetailArticleComponent,
         NotFoundComponent
     ],
@@ -120,7 +107,7 @@ export function createTranslateLoader(http: HttpClient) {
         FirebaseService,
         AuthentificationServiceService
     ],
-    exports: [],
+    exports: [MatGridListModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

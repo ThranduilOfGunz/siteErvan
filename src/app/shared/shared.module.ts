@@ -39,14 +39,12 @@ import { TranslateModule } from '@ngx-translate/core';
         ReactiveFormsModule
     ],
     declarations: [
-        DialogComponent,
         ModalAjoutArcticleComponent,
         SnackBarComponent,
         ModalAjoutArcticleComponent,
         ModaleAuthentificationComponent
     ],
     entryComponents: [
-        DialogComponent,
         ModalAjoutArcticleComponent,
         ModaleAuthentificationComponent,
         SnackBarComponent
