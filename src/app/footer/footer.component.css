@@ -18,9 +18,6 @@
     padding-right: 2%;
 }
 
-.paddingTop {
-    padding-top: 1%;
-}
 
 .clickable :hover{
     cursor: pointer;
@@ -45,3 +42,30 @@
 .paddingDeux{
     padding-top: 2%;
 }
+
+.positionBottom{
+    bottom: 0;
+    position: absolute;
+}
+
+.paddingLeft{
+    padding-left: 15%;
+}
+
+.mat-input-container{
+    width: 50%;
+}
+
+::ng-deep .mat-select-value .mat-select-value-text{
+    color:white
+}
+
+::ng-deep .mat-select-arrow-wrapper .mat-select-arrow{
+    color:white;
+}
+
+::ng-deep .mat-form-field-underline{
+    background-color: white;
+}
+
+

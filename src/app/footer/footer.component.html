@@ -1,20 +1,25 @@
-<div class="row backGroundColor  hauteur position paddingTop">
-    <div class="col-md-7 paddingDeux">
-        <i class="white">Site réalisé par Ervan Renault.</i>
+<div class="row backGroundColor  hauteur position">
+    <div class="col-md-3 col-sm-3 positionBottom">
+        <i class="white" translate>footer.creation</i>
     </div>
-    <div class="offset-md-3 col-md-2 paddingDeux">
-            <i class="white">Contact :</i>
-            <a class="afficherCurseur">
-                <i class="fa fa-facebook-f white"></i>
-            </a>
-            <a class="afficherCurseur">
-                <i class="fa fa-instagram white"></i>
-            </a>
-            <a class="afficherCurseur">
-                <i class="fa fa-twitter white"></i>
-            </a>
-            <a class="afficherCurseur">
-                <i class="fa fa-envelope white"></i>
-            </a>
-        </div>
+    <div class="col-md-1">
+        <mat-form-field>
+            <mat-select [(value)]="defaultValue">
+                <mat-option
+                    *ngFor="let langue of langues"
+                    (click)="switchLanguage(langue.value)"
+                    [value]="langue.value"
+                >
+                    {{ langue.code }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="offset-md-7 offset-sm-9 positionBottom paddingLeft">
+        <i class="white">Contact :</i>
+        <a class="afficherCurseur"> <i class="fa fa-facebook-f white"></i> </a>
+        <a class="afficherCurseur"> <i class="fa fa-instagram white"></i> </a>
+        <a class="afficherCurseur"> <i class="fa fa-twitter white"></i> </a>
+        <a class="afficherCurseur"> <i class="fa fa-envelope white"></i> </a>
+    </div>
 </div>

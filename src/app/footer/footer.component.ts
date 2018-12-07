@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-    constructor(private router: Router) {}
 
+    defaultValue = 'fr';
+
+    langues = [{code: 'FR', value: 'fr'}, {code: 'EN', value: 'en'}]
+    constructor(private translate: TranslateService) {
+        translate.setDefaultLang('fr');
+    }
     ngOnInit() {}
 
+    switchLanguage(language: string) {
+        this.translate.use(language);
+    }
 }
