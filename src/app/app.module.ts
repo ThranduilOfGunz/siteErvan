@@ -12,7 +12,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {ParallaxModule} from 'ngx-parallax';
+import { ParallaxModule } from 'ngx-parallax';
 import { CountdownModule } from 'ngx-countdown';
 
 import {
@@ -34,14 +34,14 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';
 import { AppRoutingModule } from './/app-routing.module';
-import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { HomeComponent } from './home/home.component';
 import { ButtonLogoComponent } from './shared/components/buttons/button-logo/button-logo.component';
 import { ButtonMenuComponent } from './shared/components/buttons/button-menu/button-menu.component';
 import { environment } from './../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { CvComponent } from './cv/cv.component';
 import { ExperienceComponent } from './cv/experience/experience.component';
 import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
@@ -54,7 +54,7 @@ import { ModaleAuthentificationComponent } from './shared/components/modales/mod
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-  }
+}
 @NgModule({
     declarations: [
         AppComponent,
@@ -97,17 +97,29 @@ export function createTranslateLoader(http: HttpClient) {
         CountdownModule,
         TranslateModule.forRoot({
             loader: {
-              provide: TranslateLoader,
-              useFactory: (createTranslateLoader),
-              deps: [HttpClient],
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
             }
-          }),
+        }),
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
         AngularFireModule.initializeApp(environment.firebase, 'siteervan'),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
         AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
-    providers: [AngularFireDatabase, ArticleService, FirebaseService, AuthentificationServiceService],
+    providers: [
+        AngularFireDatabase,
+        ArticleService,
+        FirebaseService,
+        AuthentificationServiceService
+    ],
     exports: [],
     bootstrap: [AppComponent]
 })
