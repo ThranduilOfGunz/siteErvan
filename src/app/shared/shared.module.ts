@@ -41,13 +41,15 @@ import { TranslateModule } from '@ngx-translate/core';
     declarations: [
         ModalAjoutArcticleComponent,
         SnackBarComponent,
+        DialogComponent,
         ModalAjoutArcticleComponent,
         ModaleAuthentificationComponent
     ],
     entryComponents: [
         ModalAjoutArcticleComponent,
         ModaleAuthentificationComponent,
-        SnackBarComponent
+        SnackBarComponent,
+        DialogComponent
     ]
 })
 export class SharedModule {}

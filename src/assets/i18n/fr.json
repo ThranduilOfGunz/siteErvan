@@ -1,10 +1,8 @@
 {
     "home": {
-        "presentation": {
-            "titre": "Hey ! Bienvenue sur mon site ! ",
-            "intro": "Vous pourrez y trouver, entre autre, mon blog que j'ai réalisé pour mon voyage en Australie,  pour le reste à vous de le découvrir..."
-        },
-        "voyage": "Décollage dans : "
+        "intro": "Vous pourrez y trouver, entre autre, mon blog que j'ai réalisé pour mon voyage en Australie,  pour le reste à vous de le découvrir...",
+        "titre": "Hey ! Bienvenue sur mon site !",
+        "voyage": "Décollage dans :"
     },
     "footer": {
         "creation": "Site réalisé par Ervan Renault."

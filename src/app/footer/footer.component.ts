@@ -13,11 +13,11 @@ export class FooterComponent implements OnInit {
 
     langues = [{code: 'FR', value: 'fr'}, {code: 'EN', value: 'en'}]
     constructor(private translate: TranslateService) {
-        translate.setDefaultLang('fr');
+
     }
     ngOnInit() {}
 
     switchLanguage(language: string) {
-        this.translate.use(language);
+        this.translate.setDefaultLang(language);
     }
 }

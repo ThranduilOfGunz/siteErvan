@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/theming';
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
-@import "../node_modules/font-awesome/css/font-awesome.css";
+@import '../node_modules/font-awesome/css/font-awesome.css';
 
 @include mat-core();
 
@@ -64,7 +64,12 @@ md-tab-group {
 }
 
 .mat-ink-bar {
-    background-color: #ec9f0d !important;
+    background-color: #ff0000 !important;
+}
+
+.mat-tab-label-active {
+    background-color: #0f1626 !important;
+    color: #0f1626;
 }
 
 .back {
@@ -91,4 +96,3 @@ md-tab-group {
 .center {
     text-align: center;
 }
-

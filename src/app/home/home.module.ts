@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
-import { BlogVoyageComponent } from 'app/blog-voyage/blog-voyage.component';
 import { MatGridListModule, MatIconModule,
     MatToolbarModule, MatCardModule, MatSelectModule, MatButtonModule, MatInputModule } from '@angular/material';
 
@@ -29,8 +28,7 @@ import { MatGridListModule, MatIconModule,
     CountdownModule
 
   ],
-  declarations: [DialogComponent, BlogVoyageComponent, HomeComponent, FooterComponent, HomeCvComponent, HomePresentationComponent,
-     HomeVoyageComponent],
-  entryComponents: [DialogComponent]
+  declarations: [],
+  entryComponents: []
 })
 export class SharedModule { }

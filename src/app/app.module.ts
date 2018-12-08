@@ -1,3 +1,9 @@
+import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
+import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
+import { HomeCvComponent } from './home/home-cv/home-cv.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { BlogVoyageComponent } from 'app/blog-voyage/blog-voyage.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AuthentificationServiceService } from './shared/services/authentification-service.service';
@@ -46,7 +52,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
 
 export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+    return new TranslateHttpLoader(http);
 }
 @NgModule({
     declarations: [
@@ -59,7 +65,13 @@ export function createTranslateLoader(http: HttpClient) {
         CvComponent,
         ExperienceComponent,
         DetailArticleComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        BlogVoyageComponent,
+        HomeComponent,
+        FooterComponent,
+        HomeCvComponent,
+        HomePresentationComponent,
+        HomeVoyageComponent
     ],
     imports: [
         BrowserModule,

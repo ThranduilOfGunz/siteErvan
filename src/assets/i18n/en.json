@@ -1,12 +1,10 @@
 {
     "home": {
-        "presentation": {
-            "titre": "Hey ! Welcome on my website ! ",
-            "intro": "Check out my blog That I have made for my journey in Australia and you could find other things about me as weel..."
-        },
-        "voyage":"Take-off in : "
+        "titre": "Hey ! Welcome on my website !",
+        "intro": "Check out my blog That I have made for my journey in Australia and you could find other things about me as well...",
+        "voyage": "Take-off in :"
     },
     "footer": {
-        "creation":  "Website made by Ervan Renault."
+        "creation": "Website made by Ervan Renault."
     }
 }

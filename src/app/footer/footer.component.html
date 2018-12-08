@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-1">
         <mat-form-field>
-            <mat-select [(value)]="defaultValue">
+            <mat-select >
                 <mat-option
                     *ngFor="let langue of langues"
                     (click)="switchLanguage(langue.value)"
