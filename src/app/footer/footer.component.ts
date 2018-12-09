@@ -18,6 +18,6 @@ export class FooterComponent implements OnInit {
     ngOnInit() {}
 
     switchLanguage(language: string) {
-        this.translate.setDefaultLang(language);
+        this.translate.use(language);
     }
 }

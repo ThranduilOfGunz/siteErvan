@@ -18,54 +18,55 @@
     padding-right: 2%;
 }
 
-
-.clickable :hover{
+.clickable :hover {
     cursor: pointer;
 }
 
-.backGroundColor{
-    background-color:  #0f1626;
+.backGroundColor {
+    background-color: #0f1626;
 }
 
-.white{
+.white {
     color: white;
 }
 
-.hauteurParties{
+.hauteurParties {
     max-height: 100px;
 }
 
-.hauteur{
+.hauteur {
     height: 80px;
 }
 
-.paddingDeux{
+.paddingDeux {
     padding-top: 2%;
 }
 
-.positionBottom{
+.positionBottom {
     bottom: 0;
     position: absolute;
 }
 
-.paddingLeft{
+.paddingLeft {
     padding-left: 15%;
 }
 
-.mat-input-container{
+.mat-input-container {
     width: 50%;
 }
 
-::ng-deep .mat-select-value .mat-select-value-text{
-    color:white
+::ng-deep .mat-select-value .mat-select-value-text {
+    color: white;
 }
 
-::ng-deep .mat-select-arrow-wrapper .mat-select-arrow{
-    color:white;
+::ng-deep .mat-select-arrow-wrapper .mat-select-arrow {
+    color: white !important;
 }
 
-::ng-deep .mat-form-field-underline{
+::ng-deep .mat-form-field-underline {
     background-color: white;
 }
 
-
+::ng-deep .mat-form-field-ripple {
+    background-color: white;
+}

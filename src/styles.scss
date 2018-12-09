@@ -50,7 +50,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
     margin: 0;
 }
 
-md-tab-group {
+.md-tab-group {
     background-color: #0f1626;
 }
 
@@ -63,12 +63,16 @@ md-tab-group {
     color: #f5f5f5 !important;
 }
 
-.mat-ink-bar {
+.mat-ink-bar .mat-input-underline .mat-form-field-underline {
     background-color: #ff0000 !important;
 }
 
 .mat-tab-label-active {
     background-color: #0f1626 !important;
+    color: #0f1626;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
     color: #0f1626;
 }
 

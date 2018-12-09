@@ -1,10 +1,7 @@
-<div class="row backGroundColor  hauteur position">
-    <div class="col-md-3 col-sm-3 positionBottom">
-        <i class="white" translate>footer.creation</i>
-    </div>
-    <div class="col-md-1">
+<div class="row backGroundColor">
+    <div class="col-md-1 col-sm-1">
         <mat-form-field>
-            <mat-select >
+            <mat-select [(value)]="defaultValue" >
                 <mat-option
                     *ngFor="let langue of langues"
                     (click)="switchLanguage(langue.value)"
@@ -15,7 +12,10 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <div class="offset-md-7 offset-sm-9 positionBottom paddingLeft">
+    <div class="col-md-3 col-sm-2 paddingDeux">
+        <i class="white" translate>footer.creation</i>
+    </div>
+    <div class="offset-md-5 col-sm-2 paddingDeux">
         <i class="white">Contact :</i>
         <a class="afficherCurseur"> <i class="fa fa-facebook-f white"></i> </a>
         <a class="afficherCurseur"> <i class="fa fa-instagram white"></i> </a>
