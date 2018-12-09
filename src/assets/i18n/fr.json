@@ -6,5 +6,9 @@
     },
     "footer": {
         "creation": "Site réalisé par Ervan Renault."
+    },
+    "skills": {
+        "education": "Etudes",
+        "experiences": "Expériences"
     }
 }
