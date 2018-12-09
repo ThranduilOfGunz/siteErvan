@@ -63,3 +63,8 @@
     height: 5%;
 }
 
+.down{
+    position: absolute;
+    bottom: 0;
+}
+

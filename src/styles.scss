@@ -13,6 +13,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 
+
 .navyBlue {
     background-color: #0f1626;
 }

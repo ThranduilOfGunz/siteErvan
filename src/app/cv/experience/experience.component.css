@@ -38,10 +38,14 @@
   }
 
   .enCoursEnTete{
-    padding-left: 50%;
+    padding-left: 45%;
     padding-top: 30%;
   }
 
   .enCoursContenu{
     padding-left: 20%;
+  }
+
+  .paddingBot{
+      padding-bottom: 1%;
   }

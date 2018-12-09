@@ -1,8 +1,15 @@
 <mat-tab-group (selectedTabChange)="versExperience($event)">
-    <mat-tab backgroundColor=" #0F1626" label="Etudes">
+    <mat-tab backgroundColor=" #0F1626">
+        <ng-template mat-tab-label
+            ><a translate>skills.education</a></ng-template
+        >
         <app-education></app-education>
     </mat-tab>
-    <mat-tab backgroundColor=" #0F1626" label="Expériences">
+    <mat-tab backgroundColor=" #0F1626">
+        <ng-template mat-tab-label
+            ><a translate>skills.experiences</a></ng-template
+        >
         <app-experience></app-experience>
     </mat-tab>
 </mat-tab-group>
+<app-footer></app-footer>
