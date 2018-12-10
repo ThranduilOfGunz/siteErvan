@@ -1,7 +1,12 @@
+import { FirebaseService } from './../shared/services/firebase.service';
 import { EtudeModel } from './../shared/models/etude.model';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
+import {
+    AngularFireDatabase,
+    FirebaseListObservable
+} from 'angularfire2/database-deprecated';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { WriteTreeCompleteChildSource } from '@firebase/database/dist/esm/src/core/view/CompleteChildSource';
 
 @Component({
     selector: 'app-education',
@@ -9,20 +14,32 @@ import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
     styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-
     etudes: FirebaseListObservable<EtudeModel[]>;
     cardSelectionne: EtudeModel;
 
     colorSelection: EtudeModel;
-    estSelectionne =  false;
+    estSelectionne = false;
     titreSelection: string;
     detailSelection = '';
     video: SafeHtml = null;
-    constructor(db: AngularFireDatabase, private ds: DomSanitizer) {
-        this.etudes = db.list('/etudes');
-     }
+    chargement = true;
+    constructor(
+        db: AngularFireDatabase,
+        private ds: DomSanitizer,
+        private firebase: FirebaseService
+    ) {
+        //  this.etudes = db.list('/etudes');
+    }
 
     ngOnInit() {
+        this.recupererEtudes();
+    }
+
+    recupererEtudes() {
+        this.firebase.getEtudes().subscribe(res => {
+            this.etudes = res;
+            this.chargement = false;
+        });
     }
 
     selectionCard(item: EtudeModel) {
@@ -32,14 +49,14 @@ export class EducationComponent implements OnInit {
             this.estSelectionne = true;
             this.cardSelectionne = item;
             if (item.lienVideo) {
-                this.video = this.ds.bypassSecurityTrustResourceUrl(item.lienVideo);
+                this.video = this.ds.bypassSecurityTrustResourceUrl(
+                    item.lienVideo
+                );
             } else {
                 this.video = null;
             }
             this.titreSelection = item.description;
             this.detailSelection = item.descriptionComplémentaire;
         }
-
     }
-
 }

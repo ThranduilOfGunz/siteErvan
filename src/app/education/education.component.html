@@ -1,52 +1,72 @@
-
-
 <div class="col-md-12">
-    <div class="row">
-        <div class="col-md-6 padding ">
-                <div class="row paddingTop" *ngFor="let item of etudes |async">
+    <div *ngIf="chargement" class="row chargement">
+        <div class="offset-md-4">
+            <img src="../../assets/images/loader_lunettes.gif" />
+        </div>
+    </div>
+    <div *ngIf="!chargement">
+        <div class="row">
+            <div class="col-md-6 padding ">
+                <div class="row paddingTop" *ngFor="let item of etudes">
                     <div id="bac" class="offset-md-2 col-md-10">
-                        <mat-card   [class.fontCouleur]="cardSelectionne === item" class=" pointeur over" (click)="selectionCard(item)"  >
+                        <mat-card
+                            [class.fontCouleur]="cardSelectionne === item"
+                            class=" pointeur over"
+                            (click)="selectionCard(item)"
+                        >
                             <mat-card-header>
                                 <mat-card-title>
-                                    <strong>{{item.nomFormation}}</strong>
+                                    <strong>{{ item.nomFormation }}</strong>
                                 </mat-card-title>
-                                <br>
+                                <br />
                                 <mat-card-subtitle>
-                                    <strong>{{item.dateDebut}} - {{item.dateFin}}</strong>
+                                    <strong
+                                        >{{ item.dateDebut }} -
+                                        {{ item.dateFin }}</strong
+                                    >
                                 </mat-card-subtitle>
                             </mat-card-header>
                             <mat-card-content>
-                                <p>
-                                    {{item.description}}
+                                <p>{{ item.description }}</p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 padding">
+                <div class="row">
+                    <div id="bac" class="offset-md-1 col-md-10 flex">
+                        <mat-card style="position: relative">
+                            <mat-card-header>
+                                <mat-card-title>
+                                    <strong *ngIf="!estSelectionne"
+                                        >Selectionner une année</strong
+                                    >
+                                    <strong *ngIf="estSelectionne">{{
+                                        titreSelection
+                                    }}</strong>
+                                </mat-card-title>
+                                <br />
+                                <mat-card-subtitle>
+                                    <strong>{{ detailSelection }}</strong>
+                                </mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content class="center">
+                                <p *ngIf="video !== null">
+                                    <iframe
+                                        [src]="video"
+                                        width="560"
+                                        height="315"
+                                        frameborder="0"
+                                        allow="autoplay; encrypted-media"
+                                        allowfullscreen
+                                    ></iframe>
                                 </p>
                             </mat-card-content>
                         </mat-card>
                     </div>
                 </div>
-        </div>
-        <div class="col-md-6 padding">
-            <div class="row">
-                <div id="bac" class="offset-md-1 col-md-10 flex">
-                    <mat-card style="position: relative">
-                        <mat-card-header>
-                            <mat-card-title>
-                                <strong *ngIf="!estSelectionne">Selectionner une année</strong>
-                                <strong *ngIf="estSelectionne">{{titreSelection}}</strong>
-                            </mat-card-title>
-                            <br>
-                            <mat-card-subtitle>
-                                <strong>{{detailSelection}}</strong>
-                            </mat-card-subtitle>
-                        </mat-card-header>
-                        <mat-card-content class="center">
-                            <p *ngIf="video !== null">
-                                <iframe [src]="video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </p>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
             </div>
         </div>
     </div>
 </div>
-

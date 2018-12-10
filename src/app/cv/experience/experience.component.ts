@@ -16,6 +16,7 @@ export class ExperienceComponent implements OnInit {
     experiencesListe: ExperienceModel[];
     enCours: ExperienceModel = new ExperienceModel();
     mouseOver = false;
+    chargement = true;
 
     constructor(public dialog: MatDialog, private db: AngularFireDatabase) {
         this.db.list('experiences').subscribe(k => {
@@ -23,6 +24,7 @@ export class ExperienceComponent implements OnInit {
             this.enCours = this.experiencesListe.filter(element => {
                 return element.id === this.experiencesListe.length - 1;
             })[0];
+            this.chargement = false;
         });
     }
 

@@ -35,6 +35,7 @@
   opacity: 1;
   transition: all 0.3s linear;
   visibility: visible;
+  cursor: pointer;
 }
 
 .cache{
@@ -44,13 +45,23 @@
   word-wrap: break-word;
 }
 
+.imageStyle{
+    cursor: pointer;
+}
+
 .redimmensionner{
-    height: inherit;
+    height: 110%;
+    width: 115% ;
 }
 
 
 .chargement{
     padding-top: 5%;
+}
+
+.paddingBott{
+    padding-bottom: 3%;
+    margin-right: 5%;
 }
 
 .positionFixed{
