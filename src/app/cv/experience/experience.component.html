@@ -1,158 +1,154 @@
-<div class="col-md-12">
-    <div *ngIf="chargement" class="row chargement">
-        <div class="offset-md-4">
-            <img src="../../assets/images/loader_lunettes.gif" />
-        </div>
+<div *ngIf="chargement" class="row chargement">
+    <div class="offset-md-4">
+        <img src="../../assets/images/loader_lunettes.gif" />
     </div>
-    <div *ngIf="!chargement">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="row">
-                    <div class="col-md-12 enCoursEnTete">
-                        <h6>En ce moment...</h6>
-                        <img
-                            class="resize"
-                            title="Capgémini"
-                            src="../../../assets/images/capge.png"
-                        />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">{{ enCours.description }}</div>
+</div>
+<div *ngIf="!chargement">
+    <div class="row col-md-12">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12 enCoursEnTete">
+                    <h6>En ce moment...</h6>
+                    <img
+                        class="resize"
+                        title="Capgémini"
+                        src="../../../assets/images/capge.png"
+                    />
                 </div>
             </div>
-            <div class="offset-md-1 col-md-8 paddingBot">
-                <div class="row espaceRow">
-                    <div class="col-md-12">
-                        <h3>Expériences informatique</h3>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">{{ enCours.description }}</div>
+            </div>
+        </div>
+        <div class="offset-md-1">
+            <div class="row espaceRow">
+                <div class="col-md-12"><h3>Expériences informatique</h3></div>
+            </div>
+            <div class="row col-md-12">
+                <div class="offset-md-2">
+                    <a (click)="clickImage(6, 'ectaris.jpg')">
+                        <img
+                            class="resize pointeur"
+                            src="../../../assets/images/ectaris.jpg"
+                        />
+                    </a>
                 </div>
-                <div class="row ">
+                <div class="offset-md-2">
+                    <a (click)="clickImage(5, 'weenjoy.jpg')">
+                        <img
+                            class="resize pointeur"
+                            src="../../../assets/images/weenjoy.jpg"
+                        />
+                    </a>
+                </div>
+                <div class="offset-md-2">
+                    <a (click)="clickImage(7, 'capge.png')">
+                        <img
+                            class="resize pointeur"
+                            src="../../../assets/images/capge.png"
+                        />
+                    </a>
+                </div>
+                <!--
                     <div class="offset-md-2">
-                        <a (click)="clickImage(6, 'ectaris.jpg')">
-                            <img
-                                class="resize pointeur"
-                                src="../../../assets/images/ectaris.jpg"
-                            />
+                        <a (click)="clickImage(8, 'capge.png')">
+                            <img class="resize pointeur" src="../../../assets/images/capge.png" />
                         </a>
                     </div>
-                    <div class="offset-md-2">
-                        <a (click)="clickImage(5, 'weenjoy.jpg')">
-                            <img
-                                class="resize pointeur"
-                                src="../../../assets/images/weenjoy.jpg"
-                            />
-                        </a>
-                    </div>
-                    <div class="offset-md-2">
-                        <a (click)="clickImage(7, 'capge.png')">
-                            <img
-                                class="resize pointeur"
-                                src="../../../assets/images/capge.png"
-                            />
-                        </a>
-                    </div>
-                    <!--
-                        <div class="offset-md-2">
-                            <a (click)="clickImage(8, 'capge.png')">
-                                <img class="resize pointeur" src="../../../assets/images/capge.png" />
-                            </a>
-                        </div>
-                    -->
+                -->
+            </div>
+            <div class="row espaceRow">
+                <div class="col-md-12"><h3>Autres expériences</h3></div>
+            </div>
+            <div class="row col-md-12">
+                <div class="offset-md-1">
+                    <a (click)="clickImage(2, 'bolorre.png')">
+                        <img
+                            class="resizeOnly pointeur espaceTop"
+                            src="../../../assets/images/bolorre.png"
+                        />
+                    </a>
                 </div>
-                <div class="row espaceRow">
-                    <div class="col-md-12"><h3>Autres expériences</h3></div>
+                <div class="offset-md-1">
+                    <a (click)="clickImage(0, 'logo-macdonald.jpg')">
+                        <img
+                            class="resize pointeur"
+                            src="../../../assets/images/logo-macdonald.jpg"
+                        />
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="offset-md-1">
-                        <a (click)="clickImage(2, 'bolorre.png')">
-                            <img
-                                class="resizeOnly pointeur espaceTop"
-                                src="../../../assets/images/bolorre.png"
-                            />
-                        </a>
-                    </div>
-                    <div class="offset-md-1">
-                        <a (click)="clickImage(0, 'logo-macdonald.jpg')">
-                            <img
-                                class="resize pointeur"
-                                src="../../../assets/images/logo-macdonald.jpg"
-                            />
-                        </a>
-                    </div>
-                    <div class="offset-md-1">
-                        <a (click)="clickImage(1, 'kusmitea.png')">
-                            <img
-                                class="resizeOnly pointeur espaceTop"
-                                src="../../../assets/images/kusmitea.png"
-                            />
-                        </a>
-                    </div>
-                    <div class="offset-md-1">
-                        <a (click)="clickImage(3, 'gaumont.jpg')">
-                            <img
-                                class="resizeBigger pointeur"
-                                src="../../../assets/images/gaumont.jpg"
-                            />
-                        </a>
-                    </div>
-                    <div class="">
-                        <a (click)="clickImage(4, 'palme.jpg')">
-                            <img
-                                class="resizeOnly pointeur"
-                                src="../../../assets/images/palme.jpg"
-                            />
-                        </a>
-                    </div>
+                <div class="offset-md-1">
+                    <a (click)="clickImage(1, 'kusmitea.png')">
+                        <img
+                            class="resizeOnly pointeur espaceTop"
+                            src="../../../assets/images/kusmitea.png"
+                        />
+                    </a>
                 </div>
-                <div class="row espaceRow">
-                    <div class="col-md-12">
-                        <h3>Technologies et outils de développement</h3>
-                    </div>
+                <div class="offset-md-1">
+                    <a (click)="clickImage(3, 'gaumont.jpg')">
+                        <img
+                            class="resizeBigger pointeur"
+                            src="../../../assets/images/gaumont.jpg"
+                        />
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="offset-md-1 col-md-11">
+                <div class="offset-md-1">
+                    <a (click)="clickImage(4, 'palme.jpg')">
                         <img
-                            class="resizeOnly"
-                            title="Angular"
-                            src="../../../assets/images/angular.png"
+                            class="resizeOnly pointeur"
+                            src="../../../assets/images/palme.jpg"
                         />
-                        <img
-                            class="resizeOnly"
-                            title="Android"
-                            src="../../../assets/images/android.png"
-                        />
-                        <img
-                            class="resizeOnly"
-                            title="Java"
-                            src="../../../assets/images/java.png"
-                        />
-                        <img
-                            class="resizeOnly"
-                            title="C#"
-                            src="../../../assets/images/csharp.png"
-                        />
-                        <img
-                            class="resizeOnly"
-                            title="Jenkins"
-                            src="../../../assets/images/jenkins.png"
-                        />
-                        <img
-                            class="resizeOnly"
-                            title="Travis"
-                            src="../../../assets/images/travis.jpg"
-                        />
-                        <img
-                            class="resize"
-                            title="Docker"
-                            src="../../../assets/images/docker.jpg"
-                        />
-                        <img
-                            class="resizeOnly"
-                            title="Unity"
-                            src="../../../assets/images/unity.png"
-                        />
-                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row espaceRow">
+                <div class="col-md-12">
+                    <h3>Technologies et outils de développement</h3>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="offset-md-1 col-md-11">
+                    <img
+                        class="resizeOnly"
+                        title="Angular"
+                        src="../../../assets/images/angular.png"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="Android"
+                        src="../../../assets/images/android.png"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="Java"
+                        src="../../../assets/images/java.png"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="C#"
+                        src="../../../assets/images/csharp.png"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="Jenkins"
+                        src="../../../assets/images/jenkins.png"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="Travis"
+                        src="../../../assets/images/travis.jpg"
+                    />
+                    <img
+                        class="resize"
+                        title="Docker"
+                        src="../../../assets/images/docker.jpg"
+                    />
+                    <img
+                        class="resizeOnly"
+                        title="Unity"
+                        src="../../../assets/images/unity.png"
+                    />
                 </div>
             </div>
         </div>
