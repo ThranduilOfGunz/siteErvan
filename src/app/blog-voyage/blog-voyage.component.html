@@ -33,7 +33,7 @@
                 </button>
             </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="offset-md-2 col-md-8">
                         <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
                             <div *ngFor="let item of photoListe">
@@ -54,13 +54,13 @@
                             </div>
                         </mat-grid-list>
                     </div>
-                </div>
+                </div> -->
 
 
-            <!-- <div class="offset-col-md-12">
+            <div class="row offset-md-2 col-md-9">
                 <div *ngFor="let item of photoListe; let i = index">
                     <div *ngIf="i % 2 == 0" class="row">
-                        <div class="col-md-3 paddingBott">
+                        <div class="col-md-5 col-sm-5 col-5 paddingBott">
                             <img
                                 title="{{item.titre}}"
                                 [src]="item.photo"
@@ -70,7 +70,7 @@
                         </div>
                         <div
                             *ngIf="photoListe[i + 1]"
-                            class="col-md-3 paddingBott"
+                            class="col-md-5 col-sm-5 col-5 paddingBott"
                         >
                             <img
                                 title="{{photoListe[i + 1].titre}}"
@@ -81,6 +81,6 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
     </div>
 </div>
