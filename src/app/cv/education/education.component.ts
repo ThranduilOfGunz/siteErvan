@@ -1,5 +1,6 @@
-import { FirebaseService } from './../shared/services/firebase.service';
-import { EtudeModel } from './../shared/models/etude.model';
+import { AffichageFooterService } from './../../shared/services/affichage-footer.service';
+import { EtudeModel } from './../../shared/models/etude.model';
+import { FirebaseService } from './../../shared/services/firebase.service';
 import {
     AngularFireDatabase,
     FirebaseListObservable
@@ -26,9 +27,9 @@ export class EducationComponent implements OnInit {
     constructor(
         db: AngularFireDatabase,
         private ds: DomSanitizer,
-        private firebase: FirebaseService
+        private firebase: FirebaseService,
+        private affichageFooter: AffichageFooterService
     ) {
-        //  this.etudes = db.list('/etudes');
     }
 
     ngOnInit() {
@@ -36,9 +37,11 @@ export class EducationComponent implements OnInit {
     }
 
     recupererEtudes() {
+        this.affichageFooter.updateData(false);
         this.firebase.getEtudes().subscribe(res => {
             this.etudes = res;
             this.chargement = false;
+            this.affichageFooter.updateData(true);
         });
     }
 
