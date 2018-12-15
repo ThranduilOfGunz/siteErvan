@@ -1,6 +1,6 @@
+import { EducationComponent } from './cv/education/education.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CvComponent } from './cv/cv.component';
-import { EducationComponent } from './education/education.component';
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';

@@ -1,3 +1,5 @@
+import { EducationComponent } from './cv/education/education.component';
+import { AffichageFooterService } from './shared/services/affichage-footer.service';
 import { HomeVoyageComponent } from './home/home-voyage/home-voyage.component';
 import { HomePresentationComponent } from './home/home-presentation/home-presentation.component';
 import { HomeCvComponent } from './home/home-cv/home-cv.component';
@@ -35,7 +37,6 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BannerComponent } from './intro/intro.component';
-import { EducationComponent } from './education/education.component';
 import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
@@ -117,7 +118,8 @@ export function createTranslateLoader(http: HttpClient) {
         AngularFireDatabase,
         ArticleService,
         FirebaseService,
-        AuthentificationServiceService
+        AuthentificationServiceService,
+        AffichageFooterService
     ],
     exports: [MatGridListModule],
     bootstrap: [AppComponent]
