@@ -1,6 +1,6 @@
 <div class="col-md-12">
     <div *ngIf="chargement" class="row chargement">
-        <div class="offset-md-4">
+        <div class="offset-md-4 col-md-2">
             <img src="../../assets/images/loader_lunettes.gif" />
         </div>
     </div>
@@ -32,30 +32,6 @@
                     <i class="fa fa-plus-square"></i>
                 </button>
             </div>
-
-                <!-- <div class="row">
-                    <div class="offset-md-2 col-md-8">
-                        <mat-grid-list cols="2" rowHeight="3:2" gutterSize="5%">
-                            <div *ngFor="let item of photoListe">
-                                <mat-grid-tile
-                                    title="{{item.titre}}"
-                                    (click)="goToDetailArticle(item)"
-                                    class="onHover"
-                                >
-                                    <img [src]="item.photo" class="redimmensionner" />
-                                    <mat-grid-tile-footer class="cache">
-                                        <h6>{{ item.lieu }}</h6>
-                                        <br />
-                                        <a *ngIf="item.date">{{
-                                            item.date | date: ', dd/MM/yyyy'
-                                        }}</a>
-                                    </mat-grid-tile-footer>
-                                </mat-grid-tile>
-                            </div>
-                        </mat-grid-list>
-                    </div>
-                </div> -->
-
 
             <div class="row offset-md-2 col-md-9">
                 <div *ngFor="let item of photoListe; let i = index">

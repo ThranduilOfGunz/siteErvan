@@ -1,3 +1,4 @@
+import { AffichageFooterService } from './../shared/services/affichage-footer.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -10,10 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
     defaultValue = 'fr';
     mail = 'ervanrenault@gmail'; // add the links to body
+    afficherFooter = true;
 
     langues = [{ code: 'FR', value: 'fr' }, { code: 'EN', value: 'en' }];
-    constructor(private translate: TranslateService) {}
-    ngOnInit() {}
+    constructor(private translate: TranslateService, private affichageFooterService: AffichageFooterService) {}
+    ngOnInit() {
+        this.affichageFooterService.affichageObservable.subscribe(res => this.afficherFooter = res)
+    }
 
     switchLanguage(language: string) {
         this.translate.use(language);
@@ -37,5 +41,10 @@ export class FooterComponent implements OnInit {
 
     mailMe() {
         window.open(`mailto:` + this.mail, '_system');
+    }
+
+    affichageFooter(event) {
+        console.log('Event : ', event);
+       event === 'chargement' ?  this.afficherFooter = false : this.afficherFooter = true;
     }
 }

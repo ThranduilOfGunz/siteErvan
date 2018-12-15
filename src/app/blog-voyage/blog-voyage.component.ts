@@ -1,11 +1,14 @@
+import { AffichageFooterService } from './../shared/services/affichage-footer.service';
+import { Observable } from 'rxjs/Observable';
 import { AuthentificationServiceService } from './../shared/services/authentification-service.service';
 import { FirebaseService } from './../shared/services/firebase.service';
 import { MatDialog } from '@angular/material';
 import { PhotoModel } from './../shared/models/photo.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ModalAjoutArcticleComponent } from '../shared/components/modales/modal-ajout-arcticle/modal-ajout-arcticle.component';
 import { Router } from '@angular/router';
 import { ArticleService } from '../shared/services/article.service';
+
 
 @Component({
     selector: 'app-blog-voyage',
@@ -13,6 +16,8 @@ import { ArticleService } from '../shared/services/article.service';
     styleUrls: ['./blog-voyage.component.css']
 })
 export class BlogVoyageComponent implements OnInit {
+
+    @Output() affichageFooter = new EventEmitter<any>();
     selectedFile: File = null;
     url: any;
     imageToShow: any;
@@ -31,7 +36,8 @@ export class BlogVoyageComponent implements OnInit {
         private router: Router,
         private articleService: ArticleService,
         private fireBaseService: FirebaseService,
-        private auth: AuthentificationServiceService
+        private auth: AuthentificationServiceService,
+        private affichageFooterService: AffichageFooterService
     ) {
         this.auth.authentifie.subscribe(res => {
             this.authentifie = res;
@@ -39,6 +45,9 @@ export class BlogVoyageComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.affichageFooterService.updateData(false);
+        this.affichageFooter.observers.push();
+        console.log(this.affichageFooter.emit(false));
         this.fireBaseService.getArticles().subscribe(
             res => {
                 this.photoListe = res;
@@ -48,6 +57,7 @@ export class BlogVoyageComponent implements OnInit {
                     }
                 });
                 this.chargement = false;
+                this.affichageFooterService.updateData(true);
             },
             error => {},
             () => {
