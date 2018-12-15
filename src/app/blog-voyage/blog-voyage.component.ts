@@ -47,7 +47,6 @@ export class BlogVoyageComponent implements OnInit {
     ngOnInit() {
         this.affichageFooterService.updateData(false);
         this.affichageFooter.observers.push();
-        console.log(this.affichageFooter.emit(false));
         this.fireBaseService.getArticles().subscribe(
             res => {
                 this.photoListe = res;

@@ -42,9 +42,4 @@ export class FooterComponent implements OnInit {
     mailMe() {
         window.open(`mailto:` + this.mail, '_system');
     }
-
-    affichageFooter(event) {
-        console.log('Event : ', event);
-       event === 'chargement' ?  this.afficherFooter = false : this.afficherFooter = true;
-    }
 }
