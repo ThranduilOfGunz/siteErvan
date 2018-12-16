@@ -7,14 +7,6 @@
     <div *ngIf="!chargement">
             <div class="offset-md-11 topStyle">
                 <button
-                    *ngIf="!authentifie"
-                    class="rgbBlue"
-                    mat-fab
-                    (click)="login()"
-                >
-                    <i class="fa fa-user"></i>
-                </button>
-                <button
                     *ngIf="authentifie"
                     class="rgbRed"
                     mat-fab

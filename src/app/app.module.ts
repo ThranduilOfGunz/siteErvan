@@ -51,6 +51,7 @@ import { ExperienceComponent } from './cv/experience/experience.component';
 import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleService } from './shared/services/article.service';
+import { LoginComponent } from './login/login.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -72,7 +73,8 @@ export function createTranslateLoader(http: HttpClient) {
         FooterComponent,
         HomeCvComponent,
         HomePresentationComponent,
-        HomeVoyageComponent
+        HomeVoyageComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,

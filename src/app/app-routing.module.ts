@@ -7,11 +7,13 @@ import { BlogVoyageComponent } from './blog-voyage/blog-voyage.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { DetailArticleComponent } from './blog-voyage/detail-article/detail-article.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: 'blog-voyage', component: BlogVoyageComponent },
   { path: 'details-article', component: DetailArticleComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent },
   { path: 'job', component: EducationComponent },
   { path: 'cv', component: CvComponent },
