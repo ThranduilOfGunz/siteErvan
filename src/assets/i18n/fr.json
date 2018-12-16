@@ -5,7 +5,10 @@
         "voyage": "Décollage dans :"
     },
     "footer": {
-        "creation": "Site réalisé par Ervan Renault."
+        "creation": "Site réalisé par Ervan Renault.",
+        "mail": {
+            "sujet": "Sujet :"
+        }
     },
     "skills": {
         "education": "Etudes",

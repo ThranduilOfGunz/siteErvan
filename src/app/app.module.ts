@@ -17,7 +17,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ParallaxModule } from 'ngx-parallax';
@@ -79,6 +79,7 @@ export function createTranslateLoader(http: HttpClient) {
         FormsModule,
         HttpModule,
         BrowserAnimationsModule,
+        ReactiveFormsModule,
         ParallaxModule,
         MatInputModule,
         MatButtonModule,
@@ -121,7 +122,7 @@ export function createTranslateLoader(http: HttpClient) {
         AuthentificationServiceService,
         AffichageFooterService
     ],
-    exports: [MatGridListModule],
+    exports: [MatGridListModule, FormsModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

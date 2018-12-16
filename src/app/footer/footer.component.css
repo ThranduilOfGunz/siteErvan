@@ -3,8 +3,8 @@
     padding-left: 0.1%;
 }
 
-.paddingText {
-    padding-top: 2%;
+.paddingCinq {
+    padding-top: 5%;
 }
 
 .iconeRedimenssion {
@@ -38,8 +38,8 @@
     height: 80px;
 }
 
-.paddingDeux {
-    padding-top: 2%;
+.paddingTopDeux {
+    padding-top: 1%;
 }
 
 .positionBottom {
@@ -70,3 +70,23 @@
 ::ng-deep .mat-form-field-ripple {
     background-color: white;
 }
+
+.styleButton {
+    background-color: #ab987a;
+    padding-top: 1%;
+}
+
+
+.paddingSocial{
+    padding-right: 5%;
+}
+
+.paddingTop{
+    padding-top: 4%
+}
+
+.padding-bottom{
+    padding-bottom: 1%;
+}
+
+

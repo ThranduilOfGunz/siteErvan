@@ -1,25 +1,85 @@
 <div *ngIf="afficherFooter" class="row backGroundColor">
-    <div class="col-md-1 col-sm-1">
-        <mat-form-field>
-            <mat-select [(value)]="defaultValue" >
-                <mat-option
-                    *ngFor="let langue of langues"
-                    (click)="switchLanguage(langue.value)"
-                    [value]="langue.value"
-                >
-                    {{ langue.code }}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
+    <div class="col-md-3 offset-md-2 col-sm-1 paddingTop">
+        <div class="row col-md-4">
+            <mat-form-field>
+                <mat-select [(value)]="defaultValue">
+                    <mat-option
+                        *ngFor="let langue of langues"
+                        (click)="switchLanguage(langue.value)"
+                        [value]="langue.value"
+                    >
+                        {{ langue.code }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row col-md-12 col-12">
+            <a class="afficherCurseur paddingSocial" (click)="open('facebook')">
+                <i class="fa fa-facebook-square fa-5x white"></i>
+            </a>
+            <a
+                class="afficherCurseur paddingSocial"
+                (click)="open('instagram')"
+            >
+                <i class="fa fa-instagram  fa-5x white"></i>
+            </a>
+            <a class="afficherCurseur paddingSocial" (click)="open('twitter')">
+                <i class="fa fa-twitter  fa-5x white"></i>
+            </a>
+        </div>
+        <div class="row col-md-12 col-sm-2 paddingDeux">
+            <div class="white" translate>footer.creation</div>
+        </div>
     </div>
-    <div class="col-md-3 col-sm-2 paddingDeux">
-        <i class="white" translate>footer.creation</i>
-    </div>
-    <div class="offset-md-5 col-sm-2 paddingDeux">
-        <i class="white">Contact :</i>
-        <a class="afficherCurseur" (click)="open('facebook')"> <i class="fa fa-facebook-f white"></i> </a>
-        <a class="afficherCurseur" (click)="open('instagram')"> <i class="fa fa-instagram white"></i> </a>
-        <a class="afficherCurseur" (click)="open('twitter')"> <i class="fa fa-twitter white"></i> </a>
-        <a class="afficherCurseur" (click)="open('mail')"> <i class="fa fa-envelope white"></i> </a>
+
+    <div class="offset-md-2 col-md-3 col-sm-2 paddingTopDeux padding-bottom">
+        <div class="row col-md-12"><div class="white">Contact :</div></div>
+        <div class="row col-md-12">
+            <div class="col-md-12 form-class">
+                <form [formGroup]="formulaire" (ngSubmit)="mailMe()">
+                    <div class="row white"><label>Email :</label></div>
+                    <div class="row">
+                        <div class="col-md-10 col-10">
+                            <input
+                                class="form-control"
+                                formControlName="emailEmetteur"
+                            />
+                        </div>
+                    </div>
+                    <div class="row white">
+                        <label translate>footer.mail.sujet</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-10">
+                            <input
+                                type="email"
+                                class="form-control"
+                                formControlName="titre"
+                            />
+                        </div>
+                    </div>
+                    <div class="row white"><label>Message :</label></div>
+                    <div class="row">
+                        <div class="col-md-10 col-10">
+                            <textarea
+                                cols="50"
+                                class="form-control"
+                                formControlName="message"
+                            ></textarea>
+                        </div>
+                        <div class=" col-md-2 paddingCinq">
+                            <button
+                                mat-button
+                                class="afficherCurseur styleButton"
+                                [disabled]="formulaire.invalid"
+                                buttonType="submit"
+                            >
+                                <i class="fa fa-envelope white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

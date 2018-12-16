@@ -5,7 +5,10 @@
         "voyage": "Take-off in :"
     },
     "footer": {
-        "creation": "Website made by Ervan Renault."
+        "creation": "Website made by Ervan Renault.",
+        "mail": {
+            "sujet": "Subject :"
+        }
     },
     "skills": {
         "education": "Education",

@@ -2,6 +2,12 @@ import { AffichageFooterService } from './../shared/services/affichage-footer.se
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import {
+    FormGroup,
+    FormBuilder,
+    Validators,
+    FormControl
+} from '@angular/forms';
 
 @Component({
     selector: 'app-footer',
@@ -12,11 +18,47 @@ export class FooterComponent implements OnInit {
     defaultValue = 'fr';
     mail = 'ervanrenault@gmail'; // add the links to body
     afficherFooter = true;
+    // composeOption: email.ComposeOptions;
+
+    /** Formulaire de contact */
+    formulaire: FormGroup;
 
     langues = [{ code: 'FR', value: 'fr' }, { code: 'EN', value: 'en' }];
-    constructor(private translate: TranslateService, private affichageFooterService: AffichageFooterService) {}
+    constructor(
+        private translate: TranslateService,
+        private affichageFooterService: AffichageFooterService,
+        private fb: FormBuilder
+    ) {
+        // this.composeOption = {
+        //     to: ['ervanrenault@gmail.com'],
+        //     subject: '',
+        //     body: ''
+        // };
+    }
     ngOnInit() {
-        this.affichageFooterService.affichageObservable.subscribe(res => this.afficherFooter = res)
+        this.initialisationFormulaire();
+        this.affichageFooterService.affichageObservable.subscribe(
+            res => (this.afficherFooter = res)
+        );
+    }
+
+    initialisationFormulaire() {
+        this.formulaire = this.fb.group({
+            emailEmetteur: new FormControl(
+                '',
+                Validators.compose([
+                    Validators.required,
+                    Validators.pattern(
+                        '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'
+                    )
+                ])
+            ),
+            message: '',
+            titre: ''
+        });
+
+        this.formulaire.get('message').setValidators([Validators.required]);
+        this.formulaire.get('titre').setValidators([Validators.required]);
     }
 
     switchLanguage(language: string) {
@@ -40,6 +82,29 @@ export class FooterComponent implements OnInit {
     }
 
     mailMe() {
-        window.open(`mailto:` + this.mail, '_system');
+        // this.composeOption.body =
+        //     this.formulaire.get('message').value +
+        //     ' ' +
+        //     this.formulaire.get('emailEmetteur').value;
+        // this.composeOption.subject = this.formulaire.get('titre').value;
+        // email
+        //     .available()
+        //     .then(available => {
+        //         console.log('Service Available');
+        //         if (available) {
+        //             email
+        //                 .compose(this.composeOption)
+        //                 .then(result => {
+        //                     console.log(result);
+        //                     if (result) {
+        //                         console.log('Email sent');
+        //                     } else {
+        //                         console.log('email failed toi send');
+        //                     }
+        //                 })
+        //                 .catch(error => console.log(error));
+        //         }
+        //     })
+        //     .catch(error => console.log(error));
     }
 }
