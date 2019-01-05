@@ -37,11 +37,13 @@ export class BlogVoyageComponent implements OnInit {
         private articleService: ArticleService,
         private fireBaseService: FirebaseService,
         private auth: AuthentificationServiceService,
-        private affichageFooterService: AffichageFooterService
+        private affichageFooterService: AffichageFooterService,
     ) {
         this.auth.authentifie.subscribe(res => {
             this.authentifie = res;
         });
+
+
     }
 
     ngOnInit() {
@@ -58,7 +60,7 @@ export class BlogVoyageComponent implements OnInit {
                 this.chargement = false;
                 this.affichageFooterService.updateData(true);
             },
-            error => {},
+            error => { },
             () => {
                 this.chargement = false;
             }
@@ -72,7 +74,7 @@ export class BlogVoyageComponent implements OnInit {
             data: { idImage: this.numeroImage }
         });
 
-        dialogRef.afterClosed().subscribe(result => {});
+        dialogRef.afterClosed().subscribe(result => { });
     }
 
     goToDetailArticle(item: PhotoModel) {

@@ -19,7 +19,7 @@
             </button>
         </div>
         <div class="col-md-10 justifier">
-            <font size="4">{{article.description}}</font>
+            <font size="4" translate>details.{{article.description}}</font>
         </div>
         <div class="col-md-1 positionBoutonRetour">
             <button mat-fab [hidden]="!auth" class="rgbRed" [disabled]="!auth" (click)="supprimerArticle(article.id)">
