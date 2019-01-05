@@ -22,6 +22,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ParallaxModule } from 'ngx-parallax';
 import { CountdownModule } from 'ngx-countdown';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
     MatInputModule,
@@ -98,6 +99,7 @@ export function createTranslateLoader(http: HttpClient) {
         MatGridListModule,
         HttpClientModule,
         CountdownModule,
+        FlexLayoutModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
