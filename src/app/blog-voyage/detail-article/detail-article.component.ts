@@ -28,6 +28,7 @@ export class DetailArticleComponent implements OnInit {
             this.article = article;
             this.article.date = article.date;
         });
+        window.scrollTo(0, 0)
     }
 
     supprimerArticle(id: any) {
