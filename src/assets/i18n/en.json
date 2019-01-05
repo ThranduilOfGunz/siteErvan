@@ -1,8 +1,8 @@
 {
     "home": {
-        "titre": "Hey ! Welcome on my website !",
+        "titre": "Hey ! Welcome at my website !",
         "intro": "Check out my blog That I have made for my journey in Australia and you could find other things about me as well...",
-        "voyage": "Take-off in :"
+        "voyage": "Check my blog !"
     },
     "footer": {
         "creation": "Website made by Ervan Renault.",
@@ -13,5 +13,12 @@
     "skills": {
         "education": "Education",
         "experiences": "Job experiences"
+    },
+    
+    "blog": {
+        "instagram": "For more pictures, go on my Instagram account."
+    },
+    "details": {
+        "photo1": "After we arrived on the 29th of december, we slept for 12 hours. The first week was a lot of visits, parcs, city center, chinatown, St Kilda... The New Year's eve was great, we've met a lot of people who were visiting as well, from many countries, no one knew each other but it was a really fun night and the firework was beautifull, the buildings was on fire and colorfull. The beach of St Kilda is a very nice place, we went by 42°, we got burned but worth it."
     }
 }

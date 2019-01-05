@@ -2,7 +2,7 @@
     "home": {
         "intro": "Vous pourrez y trouver, entre autre, mon blog que j'ai réalisé pour mon voyage en Australie,  pour le reste à vous de le découvrir...",
         "titre": "Hey ! Bienvenue sur mon site !",
-        "voyage": "Décollage dans :"
+        "voyage": "RDV sur le blog !"
     },
     "footer": {
         "creation": "Site réalisé par Ervan Renault.",
@@ -13,5 +13,11 @@
     "skills": {
         "education": "Etudes",
         "experiences": "Expériences"
+    },
+    "blog": {
+        "instagram": "Pour plus de photos rendez-vous sur mon compte instagram."
+    },
+    "details": {
+        "photo1": "Nous sommes arrivés à Melourne à 7 heures du matin le 29 Décembre 2018. Après une nuit de 12h pour tenter de nous remettre du jet lag, nous avons visité la ville en commençant par le centre et les grands magasins, puis chinatown... Nous avons parcouru les parcs de la ville et bien sûr nous avons été à la plage sous 42° (petite pensée pour le 0° en France) et attrapé quelques coups de soleil. Le jour de l'an était super, le feu d'artifice était magnifique et nous avons rencontrez pleins de bagpackers avec qui nous avons partagé ce moment !"
     }
 }
