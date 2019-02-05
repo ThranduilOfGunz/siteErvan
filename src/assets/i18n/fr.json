@@ -12,7 +12,59 @@
     },
     "skills": {
         "education": "Etudes",
-        "experiences": "Expériences"
+        "experiences": "Expériences",
+        "maintenant": "En ce moment...",
+        "titreExperiences": {
+            "informatique": "Expériences Informatique",
+            "autre": "Autres expériences",
+            "tech": "Technologies et outils de développement"
+        }
+    },
+    "experiences": {
+        "experience1": {
+            "description": "Ce poste m'a permis de decouvrir le travail en équipe dans le monde du travail. Ma mission était principalement hôte de caisse mais il m'arrivait aussi d'être en cuisine. Cela m'a permis de pouvoir apprendre à travailler sous pression et de gérer mon temps de travail de façon la plus optimale possible.",
+            "fonction": "Employé polyvalent",
+            "typeDuree": "mois"
+        },
+        "experience2": {
+            "description": "Travail saisonnier. J'ai travaillé à la chaine, en équipe, afin de préparer les différents produits proposé par la société. Ce travail demandait de la rigueur et de la rapidité.",
+            "fonction": "Manutentionnaire",
+            "typeDuree": "mois"
+        },
+        "experience3": {
+            "description": "Travail saisonnier. Je devais reconditionner des produits, principalement alimentaire, afin qu'ils soient renvoyer dans différent pays.",
+            "fonction": "Manutentionnaire",
+            "typeDuree": "mois"
+        },
+        "experience4": {
+            "description": "Pour ce travail étudiant j'avais plusieurs tâches possible, accueil de cinéma, vente de ticket et de confiserie, accompagnement en salle, aide aux clients. Ce travail m'a énormément plu j'ai pu voir le fonctionnement d'un établissement tel qu'un cinéma. Ce fut une expérience très enrichissant sur le plan professionel comme personel.",
+            "fonction": "Agent de cinéma",
+            "typeDuree": "mois"
+        },
+        "experience5": {
+            "description": "La PALME est l'association des étudiant en Informatique de Rennes 1. Pendant mon mandat j'ai pu apprendre à gérer une organisation étudiante en organisant des évenements, servir d'intermédiaire entre étudiants et enseignants. J'ai aussi pu organiser, avec l'aide de mon bureau et d'un autre BDE en association avec la direction du département informatique de Rennes 1, un gala qui réunissa près de 400 personnes dont 300 étudiants afin de célébrer l'anniversaire de notre établissement.",
+            "fonction": "Président d'association",
+            "typeDuree": "an"
+        },
+        "experience6": {
+            "description": "Ce stage de M1 m'a permis de découvrir le monde de la startup. Durant ce stage j'ai pu m'initier à Symfony2 et au CMS Drupal.",
+            "fonction": "Stagiaire",
+            "typeDuree": "mois"
+        },
+        "experience7": {
+            "description": "Premier stage dans le monde de l'entreprise. Il avait pour but de faire de la revue de code afin d'optimiser l'application mais aussi d'ajouter de nouvelle fonctionalité. Les technologie utilisées étaient le Javascript et le PHP",
+            "fonction": "Stagiaire",
+            "typeDuree": "mois"
+        },
+        "experience8": {
+            "description": "Ce stage de validation de Master, avait pour but la création d'un POC (Proof of Concept) en Angular. Durant ce stage j'ai pu apprendre et m'amuser avec cette technologie. Le but de ce POC était de faire la refonte d'une application d'Orange en y apportant un coup de jeune de la faire foisonner en y ajoutant de nouvelles fonctionnalités. Suite à mon stage j'ai continué l'aventure chez Capgemini. Je suis actuellement sur la refonte d'une application gouvernemental. Ce projet me permet de consolider mes capacité en Angular mais aussi d'apprendre de nouvelles techniques de développement.",
+            "fonction": "Stagiaire et Ingénieur Logiciel",
+            "typeDuree": "mois"
+        },
+        "experience9": {
+            "description": "Je suis actuellement en voyage en Australie partir découvrir ce pays. Renforcer mon anglais et apprendre une nouvelle culture...",
+            "fonction": "Voyageur"
+        }
     },
     "blog": {
         "instagram": "Pour plus de photos rendez-vous sur mon compte instagram."

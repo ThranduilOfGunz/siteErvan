@@ -10,11 +10,62 @@
             "sujet": "Subject :"
         }
     },
+    "experiences": {
+        "experience1": {
+            "description": "Mcdonald's brought team work and how to work in a rush and with efficiency.",
+            "fonction": "Employee, cashier/cooker",
+            "typeDuree": "month"
+        },
+        "experience2": {
+            "description": "The main goal of this job was to wark fast to make commands.",
+            "fonction": "Warehouseman",
+            "typeDuree": "month"
+        },
+        "experience3": {
+            "description": "I this job I had to repack product to send them in different country. I had to act in team and fast.",
+            "fonction": "Warehouseman",
+            "typeDuree": "month"
+        },
+        "experience4": {
+            "description": "I was a cinema agent, I had to sell tickets and manage the sweetshop. But I also do the cleaning and the managing of people waiting for the movie in case where the crowd was big.",
+            "fonction": "Cinema agent",
+            "typeDuree": "month"
+        },
+        "experience5": {
+            "description": "Called PALME, this assotiation was create to create a community for the students. Organize events, like parties, meetings with companies or other associations, student or not.",
+            "fonction": "President of the school association",
+            "typeDuree": "year"
+        },
+        "experience6": {
+            "description": "This internship allow me to discover the startup. I had to create new modules for the application used by the employee which was to manage some points of the application in a easy way. I had to use Symfony 2, Drupal and Java (7)",
+            "fonction": "Trainee",
+            "typeDuree": "month"
+        },
+        "experience7": {
+            "description": "This was my first internship in computer science. I had to create HTML pages using PHP and javascript in an existing application to generate dangerous areas for chimical products.",
+            "fonction": "Trainee",
+            "typeDuree": "month"
+        },
+        "experience8": {
+            "description": "This intership was the final step for my master degree. I had, at the first place, create a Proof Of Concept (POC) for a telecomunication company to manage their own client profils. For this project I had to use Angular (2) and TypeScript. Once this project was over, I moved to another project where I had to do refactoring in Java in an existing application. After my internship I have continue to work at Capgemini as an Angular developer and I worked the next year on an governement application which was a rework of an existing project.",
+            "fonction": "Trainee and Software engineer",
+            "typeDuree": "month"
+        },
+        "experience9": {
+            "description": "I left France to go in Australia. I wanted to travel and learn about a new culture and improve my english...",
+            "fonction": "Traveler"
+        }
+    },
     "skills": {
         "education": "Education",
-        "experiences": "Job experiences"
+        "experiences": "Job experiences",
+        "maintenant": "Now...",
+        "titreExperiences": {
+            "informatique": "Computer science experiences",
+            "autre": "Other experiences",
+            "tech": "Technologies and development tools"
+        }
     },
-    
     "blog": {
         "instagram": "For more pictures, go on my Instagram account."
     },
