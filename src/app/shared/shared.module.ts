@@ -36,7 +36,8 @@ import { TranslateModule } from '@ngx-translate/core';
         MatNativeDateModule,
         MatGridListModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule
     ],
     declarations: [
         ModalAjoutArcticleComponent,
