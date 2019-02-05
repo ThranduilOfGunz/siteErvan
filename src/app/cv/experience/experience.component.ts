@@ -49,7 +49,7 @@ export class ExperienceComponent implements OnInit {
         }
 
         const dialogRef = this.dialog.open(DialogComponent, {
-            width: '500px',
+            width: '700px',
             data: { item: item, image: image },
         });
 
