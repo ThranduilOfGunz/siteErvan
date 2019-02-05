@@ -1,16 +1,17 @@
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-8">
-        <strong>{{titre}} </strong>
-        <span *ngIf="date"> - {{date}}</span>
-        <span *ngIf="!date"> - {{duree}}  {{typeDuree}}</span>
+            <strong translate>{{societe}} </strong>
+            <span *ngIf="date" translate> : {{date}}</span>
+            <span  *ngIf="!date">
+                 : {{duree}} <span translate>experiences.{{typeDuree}}</span>
+            </span>
+            <span> - </span>
+            <span translate> experiences.{{fonction}}</span>
+        </div>
+        <div class="offset-md-2">
+            <img class="resize" [src]="image">
+        </div>
     </div>
-    <div class="offset-md-2">
-        <img class="resize" [src]="image">
-    </div>
-    </div>
-    <div class="row">
-        <br>
-        {{contenu}}
-    </div>
+    <div class="row justifier" translate>experiences.{{contenu}}</div>
 </div>
