@@ -10,16 +10,6 @@
             "sujet": "Sujet :"
         }
     },
-    "skills": {
-        "education": "Etudes",
-        "experiences": "Expériences",
-        "maintenant": "En ce moment...",
-        "titreExperiences": {
-            "informatique": "Expériences Informatique",
-            "autre": "Autres expériences",
-            "tech": "Technologies et outils de développement"
-        }
-    },
     "experiences": {
         "experience1": {
             "description": "Ce poste m'a permis de decouvrir le travail en équipe dans le monde du travail. Ma mission était principalement hôte de caisse mais il m'arrivait aussi d'être en cuisine. Cela m'a permis de pouvoir apprendre à travailler sous pression et de gérer mon temps de travail de façon la plus optimale possible.",
@@ -64,6 +54,16 @@
         "experience9": {
             "description": "Je suis actuellement en voyage en Australie partir découvrir ce pays. Renforcer mon anglais et apprendre une nouvelle culture...",
             "fonction": "Voyageur"
+        }
+    },
+    "skills": {
+        "education": "Etudes",
+        "experiences": "Expériences",
+        "maintenant": "En ce moment...",
+        "titreExperiences": {
+            "informatique": "Expériences Informatique",
+            "autre": "Autres expériences",
+            "tech": "Technologies et outils de développement"
         }
     },
     "blog": {
