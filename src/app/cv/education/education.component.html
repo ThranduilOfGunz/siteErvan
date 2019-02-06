@@ -16,7 +16,7 @@
                         >
                             <mat-card-header>
                                 <mat-card-title>
-                                    <strong>{{ item.nomFormation }}</strong>
+                                   <strong> <span translate>etudes.{{ item.nomFormation }}</span></strong>
                                 </mat-card-title>
                                 <br />
                                 <mat-card-subtitle>
@@ -27,7 +27,7 @@
                                 </mat-card-subtitle>
                             </mat-card-header>
                             <mat-card-content>
-                                <p>{{ item.description }}</p>
+                                <span class="justifier" translate>etudes.{{ item.description }}</span>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -39,16 +39,14 @@
                         <mat-card style="position: relative">
                             <mat-card-header>
                                 <mat-card-title>
-                                    <strong *ngIf="!estSelectionne"
-                                        >Selectionner une année</strong
-                                    >
-                                    <strong *ngIf="estSelectionne">{{
+                                    <strong *ngIf="!estSelectionne"><span translate>etudes.choix</span></strong>
+                                    <strong *ngIf="estSelectionne"><span translate>etudes.{{
                                         titreSelection
-                                    }}</strong>
+                                    }}</span></strong>
                                 </mat-card-title>
                                 <br />
                                 <mat-card-subtitle>
-                                    <strong>{{ detailSelection }}</strong>
+                                    <strong *ngIf="estSelectionne"><div class="justifier" translate>etudes.{{ detailSelection }}</div></strong>
                                 </mat-card-subtitle>
                             </mat-card-header>
                             <mat-card-content class="center">

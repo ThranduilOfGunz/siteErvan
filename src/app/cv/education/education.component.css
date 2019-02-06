@@ -48,3 +48,7 @@
 .over:hover{
     background-color: grey;
 }
+
+.justifier{
+    text-align: justify;
+}
