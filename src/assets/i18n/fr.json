@@ -56,6 +56,34 @@
             "fonction": "Voyageur"
         }
     },
+    "etudes": {
+        "choix": "Selectionnez une année",
+        "annee1": {
+            "description": "Baccalauréat STL (Sciences Techniques de Laboratoire), au Lycée Robert Schuman au Havre, France.",
+            "descriptionComplementaire": "Baccalauréat de chimie avec spécialité chimie industrielle. Mention assez bien.",
+            "nomFormation": "Baccalauréat Science de la Technologie de Laboratoire."
+        },
+        "annee2": {
+            "description": "Diplôme d'étude supérieur, Le Havre, France.",
+            "descriptionComplementaire": "Ce diplôme m'a permis d'acquérir le niveau de bac S en 1 an afin de pouvoir candidater par la suite à des études différentes de ce qui était possible avec mon bac technologique. Durant cette année j'ai donc pu revoir les fondamentaux necessaire en mathématique et autres sciences et c'est là que j'ai découvert pour la prmeiere fois l'informatique.",
+            "nomFormation": "DUPRES, Diplôme d'Université de Préparation aux Études Scientifiques."
+        },
+        "annee3": {
+            "description": "DUT à l'Université du Havre, France.",
+            "descriptionComplementaire": "Durant mon DUT informatique j'ai appris principalement la language Java des bases à commencer à faire du developpement avancer. Ce fut le premier language objet avec lequel j'ai pu travailler. Faire des projets et travailler en équipe. J'ai pu aussi m'initier à d'autre technologies, base de données (SQL), Tomcat, bach...",
+            "nomFormation": "DUT Informatique"
+        },
+        "annee4": {
+            "description": "Licence 3 en Informatique et Bachelor of Science Software Engineering en Irlande grace au programme ERASMUS.",
+            "descriptionComplementaire": "Ma licence 3 était composé de 3 diplômes: Licence 3 en Informatique, Bachelor of computer science et d'un DUETI, Diplome Universitaire d'Etudes Technologique International. Cette année s'est déroulée à Carlow et m'a permis de consolider mes acquis de DUT mais aussi a m'initier à de nouvelles technologies tel que Unity et Blender pour mon projet de fin d'année. J'ai pu aussi apprendre quelques base de gestion de projet. Et j'ai découvert le language C#, utilisé pour mon projet, en plus d'avoir utilisé Java tout au cours de l'année. Cette année à été très intéressante pour moi d'un point de vu universitaire, car l'université était plus prochain du système américain que français. De plus j'ai pu commencer à renforcer mon anglais et apprendre pus de la culture irlandaise.",
+            "nomFormation": "Licence 3 informatique."
+        },
+        "annee5": {
+            "description": "Master informatique, Rennes, France.",
+            "descriptionComplementaire": "J'ai choisi le master de Rennes car il me permettait de découvrir une nouvelle ville mais aussi parceque les options présentés étaient plus intéréssantes pour moi. En effet, durant mon master, lors de la première année j'ai pu, principalement, consolider mes connaissances en Java et découvert les design patterns utilisé pour le développement, A la fin de la première année nous avons, en groupe, réalisé un jeu du 'Voleur et du policier' qui consistait grace à une application Android de retrouver sa cible et de la 'capturer' (Voir vidéo). Durant ma seconde année, j'ai pu apprendre à développer un site web avec AngularJs mais surtout j'ai pu reprendre mes connaissances en 3D acquisent durant ma licence afin de participer aux cours avec une plus grande aissance et d'approfondire mes capacités dans ce domaine. J'ai donc, avec l'aide de mon groupe de travail, réalisé un niveau de course de voiture en modélisant les objets sous Blender et utilisé Unity pour créer la scène et donc coder en C#. Mais aussi réalisé un puzzle en réalité augmenté. ",
+            "nomFormation": "MITIC, Méthodes Informatiques de l'Information et de la Communication. "
+        }
+    },
     "skills": {
         "education": "Etudes",
         "experiences": "Expériences",

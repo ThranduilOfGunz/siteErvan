@@ -56,6 +56,34 @@
             "fonction": "Traveler"
         }
     },
+    "etudes": {
+        "choix": "Select one year",
+        "annee1": {
+            "description": "Chemistry dregree at the Robert Schumann high school in Le Havre.",
+            "descriptionComplementaire": "Degree of chemistry with a speciality in industrial chemistry with honors.",
+            "nomFormation": "Laboratory chemistry degree."
+        },
+        "annee2": {
+            "description": "Graduate Degree.",
+            "descriptionComplementaire": "This diploma allowed me to get access to another kind of studies. Indeed, after this degree I could chose computer science instead of keep going into chemical studies.",
+            "nomFormation": "DUPRES, Diplôme d'Université de Préparation aux Études Scientifiques."
+        },
+        "annee3": {
+            "description": "Diploma of Higher Education",
+            "descriptionComplementaire": "During this diploma I learn Java from the basics and more through projects. I also learn how databases were organized, using SQL, but also used Tomcat, and discover base of other language like  ",
+            "nomFormation": "DUT computer science"
+        },
+        "annee4": {
+            "description": "Bachelor of computer science as an international student in Ireland.",
+            "descriptionComplementaire": "During this year I had 3 diplomas to get: the bachelor degree from Ireland, the french diploma and a diploma which shows that I have done one year as an international student (for this one I had to pass a english test with and a thesis). This year allow me to learn about C#, Blender and Unity but also to improve my skills in Java. Exept the technical side, I also improve my english and learn about Ireland. It was a great opportunity for me to do such a journey.",
+            "nomFormation": "Bachelor of computer science"
+        },
+        "annee5": {
+            "description": "Master degree, Rennes, France.",
+            "descriptionComplementaire": "During my master, I mostly improved my skills in Java and I also learn about Design Pattern. At the end of my first year, with my workgroup, we had to create an android application. It was a game, using the technologie of GPS, bluetooth and Java to create an 'Cops and Rubber' game (see video below). During my second year I learn abour angularJS and the main principes of developpement. I also took Virtual Reality, Augmented reality and modeling classes. With my knowledge from my bachelor degree it was a good oportunity for me to learn more about those technologies (C#, Blender, Unity...). I created a level of car race and an augmented reality puzzle.",
+            "nomFormation": "MITIC, Méthodes Informatiques de l'Information et de la Communication (Methodes of communications and informations)"
+        }
+    },
     "skills": {
         "education": "Education",
         "experiences": "Job experiences",
