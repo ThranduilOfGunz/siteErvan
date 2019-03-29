@@ -28,7 +28,7 @@ export class BlogVoyageComponent implements OnInit {
 
     blue = '#87CEFA';
     red = '#FF0000';
-    photoListe: PhotoModel[];
+    photoListe: PhotoModel[] = [];
     authentifie = false;
 
     constructor(
@@ -52,6 +52,9 @@ export class BlogVoyageComponent implements OnInit {
         this.fireBaseService.getArticles().subscribe(
             res => {
                 this.photoListe = res;
+                this.photoListe.sort((a, b) => {
+                    return +new Date(a.date) - +new Date(b.date);
+                });
                 this.photoListe.forEach(element => {
                     if (element.id >= this.numeroImage) {
                         this.numeroImage = element.id + 1;
