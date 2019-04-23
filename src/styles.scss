@@ -94,6 +94,10 @@ $theme: mat-light-theme($primary, $accent, $warn);
     position: absolute;
 }
 
+.maxSize{
+    max-width: 100%;
+}
+
 .afficherCurseur :hover {
     cursor: pointer;
 }
