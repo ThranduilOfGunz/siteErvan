@@ -1,68 +1,59 @@
-<div class="col-md-12">
-    <div *ngIf="chargement" class="row chargement">
-        <div class="offset-md-3">
-            <img src="../../assets/images/loader_lunettes.gif" />
-        </div>
+<div *ngIf="chargement" class="row chargement">
+    <div class="offset-md-3">
+        <img class="maxSize" src="../../assets/images/loader_lunettes.gif" />
     </div>
-    <div *ngIf="!chargement">
-        <div class="row">
-            <div class="col-md-6 padding ">
-                <div class="row paddingTop" *ngFor="let item of etudes">
-                    <div id="bac" class="offset-md-2 col-md-10">
-                        <mat-card
-                            [class.fontCouleur]="cardSelectionne === item"
-                            class=" pointeur over"
-                            (click)="selectionCard(item)"
-                        >
-                            <mat-card-header>
-                                <mat-card-title>
-                                   <strong> <span translate>etudes.{{ item.nomFormation }}</span></strong>
-                                </mat-card-title>
-                                <br />
-                                <mat-card-subtitle>
-                                    <strong
-                                        >{{ item.dateDebut }} -
-                                        {{ item.dateFin }}</strong
-                                    >
-                                </mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <span class="justifier" translate>etudes.{{ item.description }}</span>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
+</div>
+<div *ngIf="!chargement">
+    <div class="row">
+        <div class="col-md-6 padding ">
+            <div class="row paddingTop" *ngFor="let item of etudes">
+                <div id="bac" class="offset-md-2 col-md-10">
+                    <mat-card [class.fontCouleur]="cardSelectionne === item" class=" pointeur over" (click)="selectionCard(item)">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <strong>
+                                    <span translate>etudes.{{ item.nomFormation }}</span>
+                                </strong>
+                            </mat-card-title>
+                            <br />
+                            <mat-card-subtitle>
+                                <strong>{{ item.dateDebut }} - {{ item.dateFin }}</strong>
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <span class="justifier" translate>etudes.{{ item.description }}</span>
+                        </mat-card-content>
+                    </mat-card>
                 </div>
             </div>
-            <div class="col-md-6 padding">
-                <div class="row">
-                    <div id="bac" class="offset-md-1 col-md-10 flex">
-                        <mat-card style="position: relative">
-                            <mat-card-header>
-                                <mat-card-title>
-                                    <strong *ngIf="!estSelectionne"><span translate>etudes.choix</span></strong>
-                                    <strong *ngIf="estSelectionne"><span translate>etudes.{{
-                                        titreSelection
-                                    }}</span></strong>
-                                </mat-card-title>
-                                <br />
-                                <mat-card-subtitle>
-                                    <strong *ngIf="estSelectionne"><div class="justifier" translate>etudes.{{ detailSelection }}</div></strong>
-                                </mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content class="center">
-                                <p *ngIf="video !== null">
-                                    <iframe
-                                        [src]="video"
-                                        width="100%"
-                                        height="100%"
-                                        frameborder="0"
-                                        allow="autoplay; encrypted-media"
-                                        allowfullscreen
-                                    ></iframe>
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
+        </div>
+        <div class="col-md-6 padding">
+            <div class="row">
+                <div id="bac" class="offset-md-1 col-md-10 flex">
+                    <mat-card style="position: relative">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <strong *ngIf="!estSelectionne">
+                                    <span translate>etudes.choix</span>
+                                </strong>
+                                <strong *ngIf="estSelectionne">
+                                    <span translate>etudes.{{ titreSelection }}
+                                    </span>
+                                </strong>
+                            </mat-card-title>
+                            <br />
+                            <mat-card-subtitle>
+                                <strong *ngIf="estSelectionne">
+                                    <div class="justifier" translate>etudes.{{ detailSelection }}</div>
+                                </strong>
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content class="center">
+                            <p *ngIf="video !== null">
+                                <iframe [src]="video" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
                 </div>
             </div>
         </div>

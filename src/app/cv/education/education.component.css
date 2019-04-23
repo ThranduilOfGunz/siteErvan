@@ -52,3 +52,7 @@
 .justifier{
     text-align: justify;
 }
+
+.maxSize{
+    width: 100%;
+}
