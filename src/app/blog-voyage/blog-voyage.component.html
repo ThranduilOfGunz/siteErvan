@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-12 height100Percent" style="overflow: auto">
     <div *ngIf="chargement" class="">
         <div class="row">
             <div class="offset-md-3">
@@ -6,7 +6,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="!chargement">
+    <div *ngIf="!chargement" class="height100Percent">
         <div class="offset-md-11 topStyle">
             <button *ngIf="authentifie" class="rgbRed" mat-fab (click)="logout()">
                 <i class="fa fa-user"></i>
@@ -16,26 +16,6 @@
             </button>
         </div>
 
-        <!-- <div *ngFor="let item of photoListe; let i = index">
-            <div *ngIf="i % 2 == 0" fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
-                <div class="col-md-5 col-sm-5 col-5">
-                    <img title="{{item.titre}}" [src]="item.photo" (click)="goToDetailArticle(item)" class=" onHover imageStyle redimmensionner"
-                    />
-                </div>
-                <div *ngIf="photoListe[i + 1]" class="col-md-5 col-sm-5 col-5">
-                    <img title="{{photoListe[i + 1].titre}}" [src]="photoListe[i + 1].photo" (click)="goToDetailArticle(photoListe[i + 1])" class=" onHover imageStyle redimmensionner"
-                    />
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div fxLayout="row" fxLayoutAlign="center" gdColumns="60px 60px" gdRows="60px 60px" fxLayout.xs="column" fxLayoutGap="0.6%">
-            <div>1. One</div>
-            <div>2. Two</div>
-            <div>3. Three</div>
-            <div>4. Four</div>
-        </div> -->
-
         <div fxLayout="column" fxLayoutAlign="center" gdColumns="30% 30%" gdRows="" fxLayout.xs="column" fxLayoutGap="10%" gdGap="0% 5%">
             <div *ngFor="let item of photoListe;  let i = index">
                 <img title="{{item.titre}}" [src]="item.photo" (click)="goToDetailArticle(item)" class=" onHover imageStyle redimmensionner"
@@ -43,32 +23,5 @@
             </div>
         </div>
         <div class="" translate>blog.instagram</div>
-
-
-        <!-- <div class="row offset-md-2 col-md-9">
-                <div *ngFor="let item of photoListe; let i = index">
-                    <div *ngIf="i % 2 == 0" class="row">
-                        <div class="col-md-5 col-sm-5 col-5 paddingBott">
-                            <img
-                                title="{{item.titre}}"
-                                [src]="item.photo"
-                                (click)="goToDetailArticle(item)"
-                                class=" onHover imageStyle redimmensionner"
-                            />
-                        </div>
-                        <div
-                            *ngIf="photoListe[i + 1]"
-                            class="col-md-5 col-sm-5 col-5 paddingBott"
-                        >
-                            <img
-                                title="{{photoListe[i + 1].titre}}"
-                                [src]="photoListe[i + 1].photo"
-                                (click)="goToDetailArticle(photoListe[i + 1])"
-                                class=" onHover imageStyle redimmensionner"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div> -->
     </div>
 </div>

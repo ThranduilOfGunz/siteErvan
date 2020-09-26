@@ -1,5 +1,5 @@
-<div *ngIf="afficherFooter" class="row backGroundColor">
-    <div class="col-md-4 offset-md-2 col-sm-1 paddingTop">
+<div *ngIf="afficherFooter" class="row p-0 m-0 backGroundColor">
+    <div class="col-md-4 offset-md-2 col-sm-1">
         <div class="row col-md-5">
             <mat-form-field>
                 <mat-select [(value)]="defaultValue">
@@ -15,16 +15,19 @@
         </div>
         <div class="row col-md-12 col-12">
             <a class="afficherCurseur paddingSocial" (click)="open('facebook')">
-                <i class="fa fa-facebook-square fa-5x white"></i>
+                <mat-icon>facebook</mat-icon>
             </a>
             <a
                 class="afficherCurseur paddingSocial"
                 (click)="open('instagram')"
             >
-                <i class="fa fa-instagram  fa-5x white"></i>
+                <mat-icon>instagram</mat-icon>
             </a>
             <a class="afficherCurseur paddingSocial" (click)="open('twitter')">
-                <i class="fa fa-twitter  fa-5x white"></i>
+                <mat-icon>twitter</mat-icon>
+            </a>
+            <a class="afficherCurseur paddingSocial" (click)="open('twitter')">
+                <mat-icon>linkedin-box</mat-icon>
             </a>
         </div>
         <div class="row col-md-12 col-sm-2 paddingDeux">
@@ -32,7 +35,7 @@
         </div>
     </div>
 
-    <div class="offset-md-1 col-md-3 col-sm-2 paddingTopDeux padding-bottom">
+    <!-- <div class="offset-md-1 col-md-3 col-sm-2 paddingTopDeux padding-bottom">
         <div class="row col-md-12"><div class="white">Contact :</div></div>
         <div class="row col-md-12">
             <div class="col-md-12 form-class">
@@ -81,5 +84,5 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
