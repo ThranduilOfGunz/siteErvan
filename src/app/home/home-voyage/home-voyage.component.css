@@ -4,6 +4,12 @@
     background-size: 100%;
 }
 
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
 #exemple {
     background-image: url('../../../assets/images/australie.jpg');
 }

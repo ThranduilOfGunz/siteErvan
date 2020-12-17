@@ -1,6 +1,9 @@
-<div class="container-fluid p-0 m-0 height100Percent verticalFlex">
-    <app-menu style="height: 5%; flex: none !important"></app-menu>
-    <div style="height: 85%"><router-outlet> </router-outlet>></div>
-    <app-footer style="height: 10%"></app-footer> 
+<div class="height100Percent verticalFlex">
+    <app-menu></app-menu>
+    <div style="overflow-y: auto;">
+        <router-outlet> </router-outlet>
+    </div>
+
+    <app-footer></app-footer> 
 </div>
 
